@@ -1,0 +1,44 @@
+body {
+  background-color: antiquewhite;
+}
+.main {
+  width: 500px;
+  height: 250px;
+  background-color: darksalmon;
+  /* border ima tri vrednosti */
+  /* border: 3px dotted rgb(0, 0, 0); */
+  /* border: 3px double rgb(0, 0, 0); */
+  /* border: 3px dashed rgb(0, 0, 0); */
+  border: 3px solid rgb(0, 0, 0);
+
+  /* margin: 50px; margina za sve cetiri stranice*/
+  margin-top: 30px;
+  margin-right: 30px;
+  margin-bottom: 10px;
+  margin-left: 15px;
+  /* definisemo margine kao kazaljke na satu */
+  margin: 50px 40px 30px 20px;
+  /* saljemo vrednosti prvom vrednoscu gore i dole
+  a drugom desno i levo */
+  margin: 50px 20px;
+  /* top right & left bottom */
+  margin: 50px 30px 20px;
+  /* auto za centriranje */
+  margin: 30px auto;
+
+  padding: 15px 25px;
+  /* radius da zaoblimo ivice */
+  /* border-bottom-left-radius: 5px; */
+  border-radius: 10px;
+  /* overflow da text ne ide van kontejnera */
+  /* box-shadow za senku */
+}
+.second {
+  width: 250px;
+  background-color: burlywood;
+  color: brown;
+  text-indent: 25px;
+}
+.main p {
+  text-align: justify;
+}

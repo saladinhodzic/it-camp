@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS</title>
+    <style>
+      body {
+        background-color: rgb(249, 242, 240);
+      }
+      /* h1 predstavlja CSS selektor sto je zapravo pravilo
+         pomocu kojeg pristupamo html elemntu za koji zelimo 
+         da definisemo stilove */
+      h1 {
+        /* color predstavlja css svojstvo */
+        color: red;
+      }
+      p {
+        /* font-size: 16px; standardna velicina slova  */
+        font-size: 18px;
+        /* indent da se prvi red uvuce */
+        text-indent: 40px;
+        /* text-align: left; standardna vrednost*/
+        text-align: right;
+        text-align: center;
+        /* primenice se poslednje definisano svojstvo */
+        text-align: justify;
+        text-align-last: right;
+        /* text-transform: lowercase;*/
+        /* text-transform: capitalize; */
+        text-transform: none;
+        color: darkolivegreen;
+      }
+      ul {
+        /* da se priblizi tackica */
+        list-style-position: inside;
+      }
+      /* class tackica */
+      .prvi {
+        background-color: bisque;
+        width: 400px;
+      }
+      /* id tarabica */
+      #naslov {
+        color: darkred;
+      }
+      /* id ima prednost u odnosu na classu */
+      /* obicno cemo koristiti id ako zelimo da definisemo
+       neki sam elemnt koji necemo ponavljat vise */
+      .naslov {
+        color: rgb(49, 134, 106);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="prvi">
+      <h1>Danas radimo CSS(Cascading style sheets)</h1>
+      <!-- Jezik za definisanje stilova na nasoj stranici -->
+      <h2 id="naslov" class="naslov">
+        CSS mozemo primeniti na nekoliko nacina
+      </h2>
+      <ul>
+        <li style="color: red; text-align: center">INLINE STILOVI</li>
+        <li>stilovi definisani u head tagu</li>
+        <li>eksterni stilovi</li>
+      </ul>
+    </div>
+    <div>
+      <h1>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
+        dolorum natus aperiam fugiat repellat dicta unde iure minus, animi hic,
+        molestias quod illum quae quasi.
+      </h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam vero,
+        nostrum accusantium delectus sint quam voluptates. Corrupti, deserunt
+        repudiandae quas ex repellat voluptates vitae veniam autem. Quasi
+        blanditiis, quo fuga a quas maiores minima inventore molestiae incidunt
+        omnis, aliquid at excepturi dicta aspernatur repellendus possimus earum
+        fugit animi numquam consequatur. Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Asperiores beatae nobis, porro iure quaerat quam, quod
+        quas iste odit omnis cum ipsum accusamus ratione eum suscipit? Commodi
+        amet quas at molestiae itaque aliquid quam porro, asperiores placeat
+        accusantium accusamus, exercitationem atque, explicabo qui cupiditate
+        repellendus iure aspernatur doloremque reprehenderit ex.
+      </p>
+    </div>
+  </body>
+</html>

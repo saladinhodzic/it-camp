@@ -1,0 +1,17 @@
+.main {
+  margin: 40px 40px 0px;
+  width: 400px;
+  height: 600px;
+  background-color: antiquewhite;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+.ljuljaska {
+  /* display: none; da odmah stavlja ono ispred njega na njegovo mesto*/
+  /* visibility: hidden; da sakrije nesto ali da zauzima prostor*/
+  display: none;
+}
+/* .main:nth-of-type() da definisemo stilove za poseban elemnt */
+.main:nth-of-type(2) {
+  display: none;
+}

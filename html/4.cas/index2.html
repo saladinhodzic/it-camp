@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- label se odnosi na id i daje mu vrednost -->
+    <!-- label oznacava text ispred inputa -->
+    <!-- placeholder varijanta za text unutar inputa -->
+    <!-- form pravi akciju ako je sve dobro ispunjeno -->
+    <div>
+      <form action="../4.cas/vezbica2.htmldsadas">
+        <label for="username">Unesite vase ime</label>
+        <input
+          type="text"
+          name="username"
+          id="username"
+          placeholder="username"
+          required
+        />
+        <br />
+        <br />
+        <label for="email">Unesite vas email</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="username@gmail.com"
+          required
+        />
+        <br />
+        <br />
+        <label for="pass">Unesite vasu lozinku</label>
+        <input
+          type="password"
+          name="password"
+          id="pass"
+          required
+          placeholder="sifra"
+        />
+
+        <br />
+        <br />
+        <label for="age">Broj godina</label>
+        <input type="number" name="age" id="age" min="18" max="100" step="2" />
+        <br />
+        <br />
+        <label for="birthDate">Datum rodjenja</label>
+        <input
+          type="date"
+          name="birthDate"
+          id="birthDate"
+          min="1900-01-01"
+          max="2006-01-01"
+        />
+        <br />
+        <br />
+
+        <p>Oznacite vase omiljeno voce:(Moguce cekirati vise)</p>
+        <label for="jagode">Jagode</label>
+        <input type="checkbox" name="jagode" id="jagode" checked /><br />
+        <label for="banana">Banana</label>
+        <input type="checkbox" name="banana" id="banana" /><br />
+        <label for="ananas">Ananas</label>
+        <input type="checkbox" name="ananas" id="ananas" /><br />
+        <br />
+        <br />
+        <p>Oznacite pol:</p>
+        <label for="m">m</label>
+        <input type="radio" name="pol" id="m" value="m" /><br />
+        <label for="z">z</label>
+        <input type="radio" name="pol" id="z" value="z" /><br />
+        <br />
+        <br />
+        <!-- Polje za pisanje texta  -->
+        <label for="bio"> biogarfija</label><br />
+        <textarea name="bio" id="bio" cols="30" rows="10" maxlength="30">
+Tekst</textarea
+        >
+        <br />
+        <br />
+        <label for="color">Boja</label>
+        <input type="color" name="color" id="color" />
+        <br />
+        <br />
+        <label for="phone">Broj telefona</label>
+        <input type="tel" name="telefon" id="phone" />
+        <br />
+        <br />
+        <label for="file">CV obrazac:</label>
+        <input type="file" name="cv" id="file" />
+        <br />
+        <br />
+        <p>Oznacite boju vasih ociju:</p>
+        <select name="eyeColor" id="eyeColor">
+          <option value="braon">Braon</option>
+          <option value="plava" selected>Plava</option>
+          <option value="zelena">Zelena</option>
+        </select>
+        <br />
+        <br />
+        <button type="reset">Resetuj</button><br />
+        <br />
+        <button type="submit">Potvrdi</button><br />
+      </form>
+    </div>
+  </body>
+</html>

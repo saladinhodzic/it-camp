@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+/* zvezdica da oznacimo sve elemente */
+/* ovo klasika da postane */
+.first {
+  width: 600px;
+  height: 400px;
+
+  background-image: url(https://img.freepik.com/free-photo/light-gray-concrete-wall_53876-89532.jpg?w=1060&t=st=1695752791~exp=1695753391~hmac=24f5c5bc18b80298e2aff32e7d0c397031ad4ead7d85eac862baefd0f1a02555);
+  background-repeat: no-repeat;
+  /* background-repeat: repeat; difolt vrednost*/
+  /* background-size: contain; siri do granice da je ne razvuce */
+  /* background-size: cover; razvlaci da bi pokrilo ceo kontejner,
+  gubi deo fotografije   */
+  background-size: 300px 300px;
+  background-size: 100% 100%;
+  overflow: auto;
+}
+/* stavljamo zarez da uticemo na dva elementa unutar kontejnera */
+.first h1,
+p {
+  color: brown;
+}
+.first p {
+  /* razmak izmedju redova */
+  line-height: 30px;
+  /* razmak izmedju slova */
+  letter-spacing: 2px;
+}
+.first h1 {
+  text-align: center;
+}
+.first:nth-of-type(2) {
+  margin-top: 30px;
+  padding: 15px;
+}

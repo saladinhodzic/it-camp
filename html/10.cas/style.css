@@ -1,4 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap");
 * {
   margin: 0;
   box-sizing: border-box;
+}
+body {
+  background-color: bisque;
+  /* font family za menjanje fonta */
+  font-family: "Raleway", sans-serif;
+  /* poppins najpopularniji font za sajtove */
+}
+.main {
+  width: 500px;
+  height: 500px;
+  background-color: #fff;
+}
+.main p {
+  font-size: 20px;
 }

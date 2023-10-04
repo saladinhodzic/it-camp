@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: bisque;
+}
+.first {
+  width: 500px;
+  height: 500px;
+  background-color: #fff;
+  /* display inline block pretvara block element u inline i block elemnt */
+  display: inline-block;
+}
+/* svaki p tag koji se nalazi unutar .first kontejnera: */
+/* .first p {
+  color: brown;
+} */
+
+/* stilovi za p tag koji je direktno child element first kontejnera */
+.first > p {
+  color: brown;
+}
+
+/* stilovi za prvi p tag koji se nalazi nakon first kontejnera */
+.first + p {
+  color: brown;
+}
+.second {
+  width: 500px;
+  height: 500px;
+  background-color: #ff5252;
+  display: inline-block;
+}
+.instagram {
+  color: #ff5252;
+  font-size: 50px;
+}
+.icon {
+  text-align: center;
+}
+
+a {
+  color: red;
+  text-decoration: none;
+  font-style: italic;
+  /* weight za debljinu slova */
+  font-weight: 800;
+}
+a:hover {
+  color: blue;
+  background-color: bisque;
+}
+/* u trenutku pritiska na element menjamo svojstva,moze za bilo koji tag */
+a:active {
+  color: black;
+}
+/* kada otvorimo link on upotrebljava visited da oznaci da smo otvarali ovo */
+a:visited {
+  color: blueviolet;
+}

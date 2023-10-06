@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgba(250, 235, 215, 0.2);
+  font-family: "Poppins", sans-serif;
+}
+
+.prvi {
+  /* opacity cini da ceo kontejner-element menja opacity (0-1) */
+  /* rgba za menjanje opacity  */
+  /* background-color: rgba(255, 228, 196, 0.5); */
+  width: 500px;
+  height: 500px;
+}
+
+img {
+  width: 750px;
+  height: 500px;
+  float: left;
+
+  margin-right: 15px;
+}
+
+.box1 {
+  width: 400px;
+  height: 400px;
+  background-color: bisque;
+  float: left;
+}
+
+.box2 {
+  width: 500px;
+  height: 500px;
+  background-color: rgb(235, 142, 28);
+  /* float: right; */
+  float: left;
+}
+/* ponistava float */
+.paragraf {
+  clear: both;
+}

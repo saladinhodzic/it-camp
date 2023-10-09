@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+}
+
+.container {
+  width: 400px;
+  height: 400px;
+  /* width: 400px;
+  height: 400px; */
+  /* width: 40vw;
+  height: 40vw; */
+  /* width: 20cm;
+  height: 20cm; */
+  background-color: bisque;
+  border: 1px solid black;
+  float: left;
+  font-size: 20px;
+}
+
+.second {
+  background-color: aquamarine;
+  width: 50%;
+  height: 80%;
+  overflow: auto;
+}
+
+.container p {
+  /* font-size: 2em; */
+  font-size: 2rem;
+}
+
+/* .container:nth-of-type(2),
+.container:nth-of-type(4) {
+  background-color: brown;
+} */
+
+/* .container:nth-of-type(even) {
+  background-color: brown;
+} */
+
+/* .container:nth-of-type(odd) {
+  background-color: brown;
+} */
+
+/* za svaki treci element */
+.container:nth-of-type(3n) {
+  background-color: brown;
+}
+
+.container:nth-last-of-type(1) {
+  background-color: blue;
+}
+
+/*  Apsolutne velicine*/
+
+/* px */
+/* cm-centimetre */
+/* mm-milimetre */
+/* in-inches (1in= 96px) */
+/* pt-points (1pt = 1/72 in ) */
+/* pc- picas (1pc = 12pt) */
+
+/* Relativne velicine */
+
+/* em - relativna u odnosu na font-size element (1em - 16px , mnozi sa 2)*/
+/* rem - relativna u odnosu na font-size root elemrnta */
+/* VW - relativna je 1% u odnosu na sirinu naseg ekrana */
+/* VH - relativna je 1% u odnosu na visinu */
+/* vmin - relativna je 1% u odnosu na manju dimenziju */
+/* vmmax - relativna je 1% u odnosu na vecu dimenziju */
+/* % - relativan u odnosu na parent element */

@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.parent {
+  background-color: yellow;
+  width: 50vw;
+  height: 80vh;
+  position: relative;
+}
+
+.child1 {
+  background-color: red;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  left: 150px;
+  top: 200px;
+}
+.child2 {
+  background-color: green;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 200px;
+  top: 250px;
+  z-index: 5;
+}
+.child3 {
+  background-color: blue;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  left: 250px;
+  top: 200px;
+}

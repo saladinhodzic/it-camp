@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.parent {
+  margin: 20px;
+  background-color: bisque;
+  height: 200vh;
+  position: relative;
+}
+.child1 {
+  background-color: rgb(187, 56, 244);
+  height: 50px;
+  /* position:static default vrednost */
+  /* position: relative;
+  top: 40px;
+  left: 10px; */
+  position: absolute;
+  left: 100px;
+  bottom: 50px;
+}
+.child2 {
+  background-color: rgb(74, 176, 239);
+  height: 50px;
+  /* position:fixed pomera u odnosu na celu stranicu */
+  position: fixed;
+  top: 0;
+  left: 50%;
+  /* z-index sluzi kao layers */
+  z-index: 5;
+}
+.child3 {
+  background-color: rgb(234, 221, 44);
+  height: 50px;
+
+  position: sticky;
+  top: 20px;
+}
+.child4 {
+  background-color: rgb(12, 171, 54);
+  height: 50px;
+}

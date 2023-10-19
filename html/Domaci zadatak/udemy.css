@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  /* border: 1px solid black; */
+}
+
+.header1 {
+  background-color: bisque;
+  height: 80px;
+  position: relative;
+}
+
+img {
+  float: left;
+  margin: 20px 10px;
+}
+
+.searchBar {
+  width: 55%;
+  position: absolute;
+  left: 15vw;
+  bottom: 5px;
+}
+
+.desno {
+  /* position: absolute;
+  right: 1%; */
+  /* float: right; */
+  /* width: 30%; */
+  /* display: inline-block; */
+  /* margin-left: 10%; */
+  /* vertical-align: middle; */
+  width: 30%;
+  float: right;
+  margin: 25px 10px;
+}
+
+.desno i {
+  margin-left: 2%;
+}
+
+.desno a {
+  margin-left: 2%;
+}
+
+.link1 {
+  margin-left: 0.6em;
+}
+
+input {
+  width: 90%;
+  margin: 25px 1em;
+}
+
+.search {
+  position: absolute;
+  left: 1em;
+  top: 28px;
+  /* float: left;
+  margin-top: 25px; */
+}
+
+.icons {
+  width: 6%;
+  position: absolute;
+  right: 2%;
+  top: 25px;
+  margin-left: 1%;
+}
+
+.icons i {
+  margin-left: 3%;
+}
+
+.header2 {
+  background-color: rgb(154, 99, 31);
+  height: 50px;
+}
+
+.logo {
+  width: 100px;
+}
+
+.slika {
+  margin-left: 10%;
+  width: 80%;
+  height: 80vh;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url(./comp3.png);
+}
+
+.kartice {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.kartica {
+  height: 150px;
+  width: 80%;
+
+  display: inline-block;
+}
+
+.kartica1 {
+  width: 32%;
+  height: 150px;
+  background-color: bisque;
+  /* float: left; */
+}
+.kartica2 {
+  width: 32%;
+  height: 150px;
+  margin-left: 1.66%;
+  background-color: brown;
+}
+.kartica3 {
+  width: 32%;
+  height: 150px;
+  background-color: blueviolet;
+  /* float: right; */
+  margin-left: 1.66%;
+}

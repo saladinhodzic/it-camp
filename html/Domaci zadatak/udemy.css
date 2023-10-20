@@ -1,7 +1,7 @@
 * {
   margin: 0;
   box-sizing: border-box;
-  /* border: 1px solid black; */
+  border: 1px solid black;
 }
 
 .header1 {
@@ -9,6 +9,12 @@
   height: 80px;
   position: relative;
 }
+
+/* .header2 {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 2em;
+} */
 
 img {
   float: left;

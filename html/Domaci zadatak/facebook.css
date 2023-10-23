@@ -25,6 +25,7 @@ body {
   z-index: 1;
   box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.201);
 }
+
 .facebook {
   color: blue;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
@@ -43,6 +44,7 @@ body {
   border-radius: 10px;
   border: none;
 }
+
 .main {
   width: 400px;
   height: 300px;
@@ -52,6 +54,7 @@ body {
   top: 250px;
   left: 300px;
 }
+
 .main h1 {
   color: blue;
   font-size: 50px;

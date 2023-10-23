@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.parent {
+  width: 500px;
+  height: 500px;
+  margin: auto;
+  background-color: bisque;
+}
+
+.child {
+  width: 50%;
+  height: 50%;
+  background-color: brown;
+  /* transition: svojstvo trajanje timing-function delay; */
+
+  transition: transform 1s linear;
+  transition: background-color 3s, transform 1s;
+}
+
+.parent:hover .child {
+  transform: translateX(100%);
+  /* transform: translate(100%, 100%); - mozemo poslati dve vrednosti x,y */
+  /* transform: scale(1.2); - povecanje ili smanjenje elementa */
+  background-color: whitesmoke;
+}

@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(239, 237, 237);
+}
+
+.aboutUs {
+  color: blue;
+  font-size: 1.5em;
+  float: right;
+  margin-right: 50px;
+  margin-top: 20px;
+}
+
+.header {
+  height: 80px;
+  width: 100%;
+  background-color: #ffff;
+
+  position: fixed;
+  /* top: 20px; */
+  z-index: 1;
+  box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.201);
+}
+
+.facebook {
+  color: blue;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: 800;
+  padding: 20px 0 0 30px;
+}
+.register {
+  height: 35px;
+  width: 125px;
+  background-color: rgb(0, 206, 0);
+  color: #ffff;
+  float: right;
+  margin-right: 30px;
+  margin-top: 20px;
+  border-radius: 10px;
+  border: none;
+}
+
+.main {
+  width: 400px;
+  height: 300px;
+
+  position: relative;
+  position: absolute;
+  top: 250px;
+  left: 300px;
+}
+
+.main h1 {
+  color: blue;
+  font-size: 50px;
+  font-weight: 800px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.main p {
+  text-align: left;
+  font-size: 20px;
+}
+
+.second {
+  width: 350px;
+  height: 300px;
+  position: relative;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 150px;
+  right: 250px;
+  background-color: #ffff;
+  float: right;
+  border-radius: 10px;
+  box-shadow: 3px 3px 12px rgba(84, 84, 84, 0.5);
+}
+/* .child2, */
+#email,
+#password {
+  width: 300px;
+  height: 35px;
+  /* margin: auto; */
+  /* border-radius: 2px; */
+  /* border-color: rgb(177, 177, 177); */
+}
+
+.submit {
+  width: 300px;
+  height: 35px;
+  background-color: blue;
+  color: aliceblue;
+  border-color: blue;
+  border-radius: 5px;
+}
+.child,
+.novi {
+  width: 150px;
+  height: 35px;
+  margin-top: 15px;
+  background-color: rgb(0, 206, 0);
+  color: #ffff;
+  border-color: rgb(0, 206, 0);
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+.sajt,
+a {
+  text-decoration: none;
+  color: blue;
+  text-align: center;
+}
+
+.lorem {
+  position: absolute;
+  bottom: -80px;
+  font-size: 1.2em;
+}

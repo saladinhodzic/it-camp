@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.parent {
+  width: 500px;
+  height: 500px;
+  margin: auto;
+  background-color: bisque;
+}
+
+.child {
+  width: 50%;
+  height: 50%;
+  background-color: brown;
+  /* transition: svojstvo trajanje timing-function delay; */
+  /* 
+  transition: transform 1s linear;
+  transition: background-color 3s, transform 1s; */
+}
+
+.parent:hover .child {
+  /* transform: translate(100%, 100%); - mozemo poslati dve vrednosti x,y */
+  /* transform: scale(1.2); - povecanje ili smanjenje elementa */
+  /* background-color: whitesmoke; */
+
+  /* animation-play-state:paused; */
+  animation: left-to-right 3s ease-in-out 0.1s forwards infinite alternate;
+}
+
+@keyframes left-to-right {
+  20% {
+    transform: translate(100%, 0);
+    background-color: antiquewhite;
+  }
+  40% {
+    transform: translate(50%, 50%);
+    background-color: antiquewhite;
+  }
+  60% {
+    transform: translate(100%, 100%);
+    background-color: antiquewhite;
+  }
+  80% {
+    transform: translate(0, 100%);
+    background-color: antiquewhite;
+  }
+  100% {
+    transform: translate(0, 0%);
+    background-color: antiquewhite;
+  }
+}

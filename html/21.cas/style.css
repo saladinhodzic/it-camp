@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  background-color: bisque;
+  color: brown;
+  font-size: 2rem;
+}
+/* @media (max-width: 500px) {
+  .main {
+    background-color: bisque;
+    color: brown;
+    font-size: 1rem;
+  } */
+
+/* @media (orientation: portrait) {
+  .main {
+    background-color: bisque;
+    color: brown;
+    font-size: 1rem;
+  } */
+
+/* @media (max-width: 500px), (min-width: 800px) {
+  .main {
+    background-color: bisque;
+    color: brown;
+    font-size: 1rem;
+  } */
+
+/* and- zadovoljavaju se oba uslova da bi se stilovi primenili */
+
+@media (max-width: 500px) and (max-height: 400px) {
+  .main {
+    background-color: bisque;
+    color: brown;
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <style>
+    .parent {
+      display: flex;
+      gap: 10px;
+    }
+    .box {
+      width: 200px;
+      height: 200px;
+      background-color: bisque;
+      animation: example 4s forwards infinite alternate;
+    }
+    .box1 {
+      width: 200px;
+      height: 200px;
+      background-color: bisque;
+      animation: example1 4s forwards infinite alternate;
+    }
+    .box2 {
+      width: 200px;
+      height: 200px;
+      background-color: bisque;
+      animation: example2 4s forwards infinite alternate;
+    }
+
+    @keyframes example {
+      from {
+        background-color: bisque;
+      }
+      to {
+        background-color: brown;
+      }
+    }
+
+    @keyframes example1 {
+      0% {
+        background-color: bisque;
+      }
+      20% {
+        background-color: brown;
+      }
+      40% {
+        background-color: chocolate;
+      }
+      60% {
+        background-color: crimson;
+      }
+      80% {
+        background-color: rgb(25, 236, 236);
+      }
+      100% {
+        background-color: darkorange;
+      }
+    }
+    @keyframes example2 {
+      0% {
+        background-color: bisque;
+      }
+      20% {
+        background-color: brown;
+      }
+      40% {
+        background-color: chocolate;
+      }
+      60% {
+        background-color: crimson;
+      }
+      80% {
+        background-color: rgb(25, 236, 236);
+      }
+      100% {
+        background-color: darkorange;
+      }
+
+      50% {
+        transform: scale(0.5);
+      }
+    }
+  </style>
+
+  <body>
+    <div class="parent">
+      <div class="box"></div>
+      <div class="box1"></div>
+      <div class="box2"></div>
+    </div>
+  </body>
+</html>

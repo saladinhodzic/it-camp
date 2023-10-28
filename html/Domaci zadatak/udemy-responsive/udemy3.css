@@ -1,0 +1,275 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: #5624d0;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+}
+
+.header1 {
+  background-color: #ffff;
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid grey;
+}
+
+.first {
+  width: 15%;
+  /* background-color: aliceblue; */
+  display: flex;
+  align-items: center;
+}
+
+.link1 {
+  margin-right: 10px;
+}
+
+.logo {
+  width: 60%;
+
+  margin-left: 1.5em;
+}
+
+.lupa {
+  position: relative;
+  left: 45px;
+}
+
+.search {
+  flex: 1;
+  margin: auto 15px;
+  height: 3em;
+  padding-left: 3em;
+  border-radius: 30px;
+  border: 2px solid black;
+}
+
+.second {
+  width: 30%;
+  /* background-color: aquamarine; */
+  display: flex;
+  justify-content: space-between;
+  margin-right: 1.5em;
+}
+
+.loptica {
+  position: absolute;
+  right: 50px;
+  top: 20px;
+  width: 10px;
+  height: 10px;
+  background-color: darkmagenta;
+  border-radius: 50%;
+}
+.loptica2 {
+  position: absolute;
+  right: 18px;
+  top: 20px;
+  width: 10px;
+  height: 10px;
+  background-color: darkmagenta;
+  border-radius: 50%;
+}
+
+.header2 {
+  background-color: #ffff;
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 7px 1px grey;
+  clip-path: inset(0 0 -10px 0);
+}
+.links {
+  width: 70%;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.slika {
+  width: 70%;
+  height: 700px;
+  background-image: url(./4804443.jpg);
+  background-size: 100% 100%;
+  margin: auto;
+  margin-bottom: 2em;
+}
+
+.naslov {
+  width: 70%;
+  margin: auto;
+  margin-bottom: 1em;
+}
+
+.kartice {
+  width: 70%;
+  margin: auto;
+  height: 150px;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  margin-bottom: 3em;
+}
+
+.text > p {
+  padding: 20px 10px 0 10px;
+  text-align: justify;
+
+  text-indent: 20px;
+}
+
+.kartica1 {
+  display: flex;
+  /* background-color: aqua; */
+  /* flex-grow: 1; */
+  border: 1px solid grey;
+}
+
+.kartica .text {
+  display: flex;
+}
+
+.kartica2 {
+  height: 150px;
+  display: flex;
+  /* flex-grow: 1; */
+  border: 1px solid grey;
+
+  /* background-color: rgb(0, 30, 255); */
+}
+
+.kartica1 img {
+  width: 45%;
+}
+
+.kartica2 img {
+  width: 45%;
+}
+.kartica3 img {
+  width: 45%;
+}
+
+.kartica3 {
+  display: flex;
+  /* flex-grow: 1; */
+  border: 1px solid grey;
+
+  /* background-color: rgb(255, 0, 157); */
+}
+
+footer {
+  /* background-color: #5624d0; */
+  height: 10em;
+  width: 100%;
+  position: relative;
+}
+
+.footer1 {
+  height: 50%;
+  width: 100%;
+
+  /* background-color: beige; */
+  border: 1px solid grey;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.wrapper1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* background-color: aquamarine; */
+  transition: all 1s;
+}
+
+.wrapper1:hover {
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+}
+
+.footer2 {
+  height: 50%;
+  width: 100%;
+  /* background-color: beige; */
+  /* border: 1px solid grey; */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.lopta1,
+.lopta2 {
+  position: absolute;
+  height: 3em;
+  width: 3em;
+  background-color: red;
+  border-radius: 50%;
+  /* transition: 2s; */
+}
+
+.wrapper1:hover .lopta1 {
+  -webkit-transform: translate(-100%);
+  transform: translateX(-100%);
+}
+/* footer:hover .lopta2 {
+    transform: translateX(-92.8em);
+  } */
+
+@media (max-width: 500px) {
+  .kartice {
+    width: 95%;
+
+    height: 600px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 0;
+    margin: auto;
+  }
+  .kartica1 {
+    height: 150px;
+  }
+  .kartica2 {
+    height: 150px;
+  }
+  .kartica3 {
+    height: 150px;
+  }
+  .text > p {
+    font-size: 0.8em;
+    padding: 20px 10px 0 10px;
+    text-align: justify;
+
+    text-indent: 20px;
+  }
+  .header1 {
+    height: 8vh;
+  }
+  .logo {
+    width: 3em;
+
+    margin-left: 5px;
+  }
+  .link1 {
+    margin-right: 0;
+    margin-left: 5px;
+    font-size: 0.8em;
+  }
+}

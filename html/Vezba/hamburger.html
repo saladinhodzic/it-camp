@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .hamnav{
+        width: 100%;
+        /* background-color: bisque; */
+    }
+
+    .hamnav label, #hamburger{display: none;}
+
+    .hamitems a{
+        padding: 10px;
+        color: brown;
+        text-decoration: none;
+        text-align: center;
+        flex-grow: 1;
+        flex-basis: 0;
+    }
+    .hamitems a:hover{
+        background-color: brown;
+        color: aliceblue;
+    }
+    
+    
+    
+    
+    @media(max-width:700px) {
+        
+        .hamitems{
+            display: block;
+        }
+        .hamitems a{
+            display: block;
+            align-items: center;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .hamnav label{
+            display: inline-block;
+            font-size: 1.2em;
+            padding: 10px;
+            font-style: normal;
+        }
+        .hamnav label:hover{
+     color: aliceblue;
+     background-color:brown;
+     cursor: pointer;
+
+        }
+        .hamitems{
+            /* display: none; */
+            /* transition: translate 1s; */
+        transform:translateY(-150%) ;
+        
+           transition: transform 1s;
+           background-color: bisque;
+          
+        }
+
+        .hamnav input:checked~.hamitems{
+            /* display: block; */
+        /* translate: 0; */
+        transform:translateY(0%) ;
+    }
+
+     
+        
+    }
+    
+</style>
+<body>
+    <nav class="hamnav">
+        <label for="hamburger">&#9776</label>
+        <input type="checkbox" id="hamburger">
+
+        <div class="hamitems">
+            <a href="#">First</a>
+            <a href="#">Second</a>
+            <a href="#">Third</a>
+            <a href="#">Fourth</a>
+        </div>
+    </nav>
+</body>
+</html>

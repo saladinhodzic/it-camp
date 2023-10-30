@@ -11,8 +11,11 @@
         /* background-color: bisque; */
     }
 
-    .hamnav label, #hamburger{display: none;}
+    .hamnav label, #hamburger{
+        display:none;
+    }
 
+    
     .hamitems a{
         padding: 10px;
         color: brown;
@@ -21,58 +24,32 @@
         flex-grow: 1;
         flex-basis: 0;
     }
-    .hamitems a:hover{
-        background-color: brown;
-        color: aliceblue;
-    }
-    
-    
-    
-    
-    @media(max-width:700px) {
+
+    @media (max-width:700px){
         
-        .hamitems{
+        .hamitems a{
+            width: 100%;
             display: block;
         }
-        .hamitems a{
+        .hamitems{
             display: block;
-            align-items: center;
-            width: 100%;
-            box-sizing: border-box;
         }
 
         .hamnav label{
             display: inline-block;
-            font-size: 1.2em;
-            padding: 10px;
-            font-style: normal;
         }
-        .hamnav label:hover{
-     color: aliceblue;
-     background-color:brown;
-     cursor: pointer;
 
-        }
         .hamitems{
-            /* display: none; */
-            /* transition: translate 1s; */
-        transform:translateY(-150%) ;
-
-           transition: transform 1s;
-           background-color: bisque;
-          
-        }
-
-        .hamnav input:checked~.hamitems{
-            /* display: block; */
-        /* translate: 0; */
-        transform:translateY(0%) ;
-    }
-
-     
+            transform:translateY(-150%);
+            transition: transform 1s
         
+        }
+        .hamnav input:checked ~ .hamitems{
+            transform: translateY(0);
+        }
     }
-    
+
+
 </style>
 <body>
     <nav class="hamnav">
@@ -80,7 +57,7 @@
         <input type="checkbox" id="hamburger">
 
         <div class="hamitems">
-            <a  href="#">First</a>
+            <a href="#">First</a>
             <a href="#">Second</a>
             <a href="#">Third</a>
             <a href="#">Fourth</a>

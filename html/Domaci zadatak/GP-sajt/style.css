@@ -4,9 +4,11 @@
 }
 
 h1,
+h2,
 a,
 p,
-h3 {
+h3,
+li {
   font-family: "Poppins";
 }
 
@@ -18,7 +20,7 @@ h3 {
 }
 .slika {
   position: relative;
-  background-image: url(./black-white-dramatic-landscapes-with-city.jpg);
+  background-image: url(./bg.png);
   width: 100%;
   height: 100vh;
   background-size: 100%;
@@ -92,17 +94,20 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 3em;
+  /* gap: 3em; */
 }
 
 .text h1 {
   text-align: center;
   font-weight: 700;
   font-size: 4em;
+  color: #fff;
 }
 
-.text h3 {
+.h3-sto-ne-slusa {
   text-align: center;
+  color: #fff;
+  margin-bottom: 3em;
 }
 
 .boxevi {
@@ -154,7 +159,7 @@ main {
   padding-top: 2em;
 }
 .desno {
-  background-image: url(./camera-photographic-with-smartphone-devices-generative-ai.jpg);
+  background-image: url(./woman-enjoying-her-exterior-hobbies.jpg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }

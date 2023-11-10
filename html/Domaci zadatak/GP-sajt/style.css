@@ -151,21 +151,111 @@ main {
 
 .main1 {
   width: 80%;
-  height: 60vh;
+  height: 70vh;
   margin: auto;
   display: grid;
   column-gap: 20px;
   grid-template-columns: 1fr 1fr;
-  padding-top: 2em;
+  padding-top: 10vh;
+  margin-bottom: 5em;
 }
+
 .desno {
-  background-image: url(./woman-enjoying-her-exterior-hobbies.jpg);
+  background-image: url(./group-young-businesspeople-meeting-office.jpg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
 
 .levo {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.levo ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.levo li {
+  background-image: url(./live-scan-orange-tree-at-sign-quality-control-check-mark-voting-button-orange-yellow-icons-removebg-preview.png);
+  list-style: none;
+  padding-left: 2em;
+  background-size: 1.7em;
+  /* background-position: left; */
+  background-repeat: no-repeat;
+}
+
+.traka {
+  width: 100%;
+
+  height: 20vh;
+  border: 1px solid grey;
+  margin-bottom: 5em;
+}
+
+.main2 {
+  height: 80vh;
+  width: 80%;
+  display: flex;
+  margin: auto;
+  gap: 20px;
+}
+
+.main2 .slicica {
+  background-image: url(./female-hands-typing-computer-keyboard.jpg);
+  width: 50%;
+  height: 60vh;
+  background-size: 100% 100%;
+}
+
+.main2 .redovi {
+  width: 50%;
+  height: 60vh;
+}
+
+.main2 .redovi div {
+  height: 25%;
+
+  display: flex;
+  align-items: center;
+}
+
+.main2 .redovi div:nth-of-type(1) {
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+  grid-template-rows: 1fr 1fr;
+}
+.main2 .redovi div:nth-of-type(1) i {
+  grid-row: span 2;
+}
+.main2 .redovi div:nth-of-type(2) {
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+  grid-template-rows: 1fr 1fr;
+}
+.main2 .redovi div:nth-of-type(2) i {
+  grid-row: span 2;
+}
+.main2 .redovi div:nth-of-type(3) {
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+  grid-template-rows: 1fr 1fr;
+}
+.main2 .redovi div:nth-of-type(3) i {
+  grid-row: span 2;
+}
+.main2 .redovi div:nth-of-type(4) {
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+  grid-template-rows: 1fr 1fr;
+}
+.main2 .redovi div:nth-of-type(4) i {
+  grid-row: span 2;
+}
+
+.main2 .redovi div i {
+  color: orange;
+  font-size: 2em;
 }

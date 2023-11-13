@@ -171,19 +171,43 @@ main {
   /* transform-style: preserve-3d; */
   perspective: 10px;
 }
-main:nth-of-type(1) {
-  height: 100vh;
-}
+
 .main1 {
+  height: 90vh;
   width: 80%;
-  height: 70vh;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 2em;
+}
+
+.main1 h1,
+.about {
+  text-align: end;
+}
+
+.about {
+  color: #aaa;
+}
+
+.main1 .about::before {
+  display: inline-block;
+  margin: 4px 10px;
+  content: "";
+  width: 100px;
+  height: 1px;
+  background-color: rgb(255, 222, 158);
+}
+
+.content {
+  width: 100%;
+  height: 70vh;
+  margin-top: 2em;
   display: grid;
   column-gap: 20px;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 8fr 2fr;
-  padding-top: 10vh;
-  margin-bottom: 5em;
 }
 
 .desno {
@@ -219,6 +243,7 @@ main:nth-of-type(1) {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
   gap: 1em;
   height: 30vh;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)) 0% 0% /
@@ -255,8 +280,8 @@ main:nth-of-type(1) {
   width: 80%;
   display: flex;
   margin: auto;
+  align-items: center;
   gap: 20px;
-  margin-top: 5em;
 }
 
 .main2 .slicica {
@@ -303,6 +328,7 @@ main:nth-of-type(1) {
   width: 80%;
   height: 100vh;
   margin: auto;
+  margin-bottom: 2em;
 }
 
 .main3 .service {
@@ -349,4 +375,68 @@ main:nth-of-type(1) {
 .main3 .kartica i {
   font-size: 2em;
   color: orange;
+}
+
+.trakica {
+  height: 30vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)) 0% 0% /
+      cover,
+    url(./low-angle-tall-buildings-city.jpg) center center fixed;
+
+  margin-bottom: 2em;
+}
+
+.main4 {
+  width: 80%;
+  height: 100vh;
+  margin: auto;
+}
+
+.main4 .galerija {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  margin-top: 2em;
+
+  grid-template-rows: 250px 250px 250px 250px;
+}
+
+.foto1 {
+  background-image: url(../slikeGP/boy-filming-with-camcorder-yellow-scene.jpg);
+  background-size: 100%;
+
+  grid-row: span 2;
+}
+
+.foto1:hover {
+}
+
+.foto2 {
+  background-image: url(../slikeGP/close-up-professional-digital-camera-tripod.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.foto3 {
+  background-image: url(../slikeGP/part-acoustic-guitar-guitar-fretboard-with-strings-black-background-with-highlights.jpg);
+  background-size: 100%;
+}
+
+.foto4 {
+  background-image: url(../slikeGP/hand-holding-photo-camera.jpg);
+  background-size: 100%;
+
+  grid-row: span 2;
+}
+
+.foto5 {
+  background-image: url(../slikeGP/fresh-yellow-daisy-single-flower-close-up-beauty-generated-by-ai.jpg);
+  background-size: 100%;
+}
+
+.foto6 {
+  background-image: url(../slikeGP/drummer-using-drum-sticks-hitting-snare-drum-with-splashing-water-black-background-studio-lighting-close-up.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }

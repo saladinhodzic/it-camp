@@ -384,12 +384,53 @@ main {
     url(./low-angle-tall-buildings-city.jpg) center center fixed;
 
   margin-bottom: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.trakica h1,
+.trakica p {
+  color: #fff;
+}
+
+.trakica button {
+  font-size: 1.2em;
+  font-weight: 400;
+  padding: 8px 28px;
+  border: 2px solid #fff;
+  color: #fff;
+  background: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 0.5em;
+  transition: all 0.2s;
+}
+
+.trakica button:hover {
+  color: black;
+  background-color: rgb(255, 196, 81);
+  border: 2px solid rgb(255, 196, 81);
 }
 
 .main4 {
   width: 80%;
   height: 100vh;
   margin: auto;
+}
+
+.main4 .portfolio {
+  color: #aaa;
+}
+
+.main4 .portfolio::after {
+  background-color: rgb(255, 196, 81);
+  height: 1px;
+  width: 120px;
+  display: inline-block;
+  content: "";
+  margin: 8px 10px;
 }
 
 .main4 .galerija {
@@ -407,20 +448,146 @@ main {
   background-size: 100%;
 
   grid-row: span 2;
+
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 0.5em;
+  padding: 2em;
+}
+
+.foto1 h3,
+.foto1 p {
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.foto1 .ikonice {
+  color: #fff;
+  font-size: 1.5em;
+  display: flex;
+  gap: 0.75em;
+  transition: all 0.2s ease-in-out;
+
+  visibility: hidden;
+  opacity: 0;
 }
 
 .foto1:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../slikeGP/boy-filming-with-camcorder-yellow-scene.jpg);
+}
+
+.foto1:hover h3,
+.foto1:hover p,
+.foto1:hover .ikonice {
+  opacity: 1;
+  visibility: visible;
+}
+
+.foto1 .ikonice i:hover {
+  color: rgb(255, 196, 81);
+  cursor: pointer;
 }
 
 .foto2 {
   background-image: url(../slikeGP/close-up-professional-digital-camera-tripod.jpg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
+
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 0.5em;
+  padding: 2em;
+}
+
+.foto2 h3,
+.foto2 p {
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.foto2 .ikonice {
+  color: #fff;
+  font-size: 1.5em;
+  display: flex;
+  gap: 0.75em;
+  transition: all 0.2s ease-in-out;
+
+  visibility: hidden;
+  opacity: 0;
+}
+
+.foto2:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../slikeGP/close-up-professional-digital-camera-tripod.jpg);
+}
+
+.foto2:hover h3,
+.foto2:hover p,
+.foto2:hover .ikonice {
+  opacity: 1;
+  visibility: visible;
+}
+
+.foto2 .ikonice i:hover {
+  color: rgb(255, 196, 81);
+  cursor: pointer;
 }
 
 .foto3 {
   background-image: url(../slikeGP/part-acoustic-guitar-guitar-fretboard-with-strings-black-background-with-highlights.jpg);
   background-size: 100%;
+
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 0.5em;
+  padding: 2em;
+}
+
+.foto3 h3,
+.foto3 p {
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.foto3 .ikonice {
+  color: #fff;
+  font-size: 1.5em;
+  display: flex;
+  gap: 0.75em;
+  transition: all 0.2s ease-in-out;
+
+  visibility: hidden;
+  opacity: 0;
+}
+
+.foto3:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../slikeGP/part-acoustic-guitar-guitar-fretboard-with-strings-black-background-with-highlights.jpg);
+}
+
+.foto3:hover h3,
+.foto3:hover p,
+.foto3:hover .ikonice {
+  opacity: 1;
+  visibility: visible;
+}
+
+.foto3 .ikonice i:hover {
+  color: rgb(255, 196, 81);
+  cursor: pointer;
 }
 
 .foto4 {
@@ -428,15 +595,143 @@ main {
   background-size: 100%;
 
   grid-row: span 2;
+
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 0.5em;
+  padding: 2em;
+}
+
+.foto4 h3,
+.foto4 p {
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.foto4 .ikonice {
+  color: #fff;
+  font-size: 1.5em;
+  display: flex;
+  gap: 0.75em;
+  transition: all 0.2s ease-in-out;
+
+  visibility: hidden;
+  opacity: 0;
+}
+
+.foto4:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../slikeGP/hand-holding-photo-camera.jpg);
+}
+
+.foto4:hover h3,
+.foto4:hover p,
+.foto4:hover .ikonice {
+  opacity: 1;
+  visibility: visible;
+}
+
+.foto4 .ikonice i:hover {
+  color: rgb(255, 196, 81);
+  cursor: pointer;
 }
 
 .foto5 {
   background-image: url(../slikeGP/fresh-yellow-daisy-single-flower-close-up-beauty-generated-by-ai.jpg);
   background-size: 100%;
+
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 0.5em;
+  padding: 2em;
+}
+.foto5 h3,
+.foto5 p {
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.foto5 .ikonice {
+  color: #fff;
+  font-size: 1.5em;
+  display: flex;
+  gap: 0.75em;
+  transition: all 0.2s ease-in-out;
+
+  visibility: hidden;
+  opacity: 0;
+}
+
+.foto5:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../slikeGP/fresh-yellow-daisy-single-flower-close-up-beauty-generated-by-ai.jpg);
+}
+
+.foto5:hover h3,
+.foto5:hover p,
+.foto5:hover .ikonice {
+  opacity: 1;
+  visibility: visible;
+}
+
+.foto5 .ikonice i:hover {
+  color: rgb(255, 196, 81);
+  cursor: pointer;
 }
 
 .foto6 {
   background-image: url(../slikeGP/drummer-using-drum-sticks-hitting-snare-drum-with-splashing-water-black-background-studio-lighting-close-up.jpg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
+
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 0.5em;
+  padding: 2em;
+}
+
+.foto6 h3,
+.foto6 p {
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.foto6 .ikonice {
+  color: #fff;
+  font-size: 1.5em;
+  display: flex;
+  gap: 0.75em;
+  transition: all 0.2s ease-in-out;
+
+  visibility: hidden;
+  opacity: 0;
+}
+
+.foto6:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../slikeGP/drummer-using-drum-sticks-hitting-snare-drum-with-splashing-water-black-background-studio-lighting-close-up.jpg);
+}
+
+.foto6:hover h3,
+.foto6:hover p,
+.foto6:hover .ikonice {
+  opacity: 1;
+  visibility: visible;
+}
+
+.foto6 .ikonice i:hover {
+  color: rgb(255, 196, 81);
+  cursor: pointer;
 }

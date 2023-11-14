@@ -3,6 +3,27 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 9em;
+}
+
+html::-webkit-scrollbar {
+  width: 1.5vw;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #666;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background-color: #888;
+}
+
+html::-webkit-scrollbar-track {
+  background-color: #555;
+}
+
 body {
   font-family: Poppins;
 }
@@ -99,11 +120,11 @@ header {
 
 main {
   width: 80%;
-  height: 50vh;
+  /* height: 50vh; */
   margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-
+  margin-bottom: 5em;
   column-gap: 40px;
 }
 .child p {
@@ -150,4 +171,217 @@ main {
 .dugme:hover {
   background-color: black;
   color: #fff;
+}
+
+.galerija {
+  background-color: bisque;
+  width: 100%;
+  height: 80vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 300px 300px;
+}
+
+.foto1 {
+  background-image: url(../slike/professional-camera-tripod-autumn-forest-filtered-image.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 1em;
+  /* transition: all 3s; */
+}
+
+.foto1:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)),
+    url(../slike/professional-camera-tripod-autumn-forest-filtered-image.jpg);
+}
+
+.foto1 h1,
+.foto1 h3 {
+  color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  margin: 5px;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.foto1:hover h1 {
+  opacity: 1;
+  visibility: visible;
+}
+.foto1:hover h3 {
+  opacity: 1;
+  visibility: visible;
+}
+
+.foto2 {
+  background-image: url(../slike/camera-photographic-with-smartphone-devices-generative-ai.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 1em;
+}
+
+.foto2:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)),
+    url(../slike/camera-photographic-with-smartphone-devices-generative-ai.jpg);
+}
+
+.foto2 h1,
+.foto2 h3 {
+  color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  margin: 5px;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.foto2:hover h1 {
+  opacity: 1;
+  visibility: visible;
+}
+.foto2:hover h3 {
+  opacity: 1;
+  visibility: visible;
+}
+.foto3 {
+  background-image: url(../slike/glowing-filament-ignites-ideas-innovative-solutions-generated-by-ai.jpg);
+  background-size: 100% 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 1em;
+}
+
+.foto3:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)),
+    url(../slike/glowing-filament-ignites-ideas-innovative-solutions-generated-by-ai.jpg);
+}
+.foto3 h1,
+.foto3 h3 {
+  color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  margin: 5px;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.foto3:hover h1 {
+  opacity: 1;
+  visibility: visible;
+}
+.foto3:hover h3 {
+  opacity: 1;
+  visibility: visible;
+}
+
+.foto4 {
+  background-image: url(../slike/abstract-eye-portrait-young-women-elegance-generated-by-ai.jpg);
+  background-size: 100% 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 1em;
+}
+
+.foto4:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)),
+    url(../slike/abstract-eye-portrait-young-women-elegance-generated-by-ai.jpg);
+}
+.foto4 h1,
+.foto4 h3 {
+  color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  margin: 5px;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.foto4:hover h1 {
+  opacity: 1;
+  visibility: visible;
+}
+.foto4:hover h3 {
+  opacity: 1;
+  visibility: visible;
+}
+
+.foto5 {
+  background-image: url(../slike/selective-focus-old-fashioned-canon-lens-glass-generated-by-ai.jpg);
+  background-size: 100% 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 1em;
+}
+.foto5:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)),
+    url(../slike/selective-focus-old-fashioned-canon-lens-glass-generated-by-ai.jpg);
+}
+
+.foto5 h1,
+.foto5 h3 {
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  margin: 5px;
+
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.foto5:hover h1 {
+  visibility: visible;
+  opacity: 1;
+}
+.foto5:hover h3 {
+  visibility: visible;
+  opacity: 1;
+}
+
+.foto6 {
+  background-image: url(../slike/cutting-metal-with-plasma-equipment.jpg);
+  background-size: 100% 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 1em;
+}
+.foto6:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)),
+    url(../slike/cutting-metal-with-plasma-equipment.jpg);
+}
+
+.foto6 h1,
+.foto6 h3 {
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  margin: 5px;
+
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.foto6:hover h1 {
+  visibility: visible;
+  opacity: 1;
+}
+.foto6:hover h3 {
+  visibility: visible;
+  opacity: 1;
 }

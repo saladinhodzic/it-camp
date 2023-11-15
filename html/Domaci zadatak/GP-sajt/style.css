@@ -43,7 +43,7 @@ li {
   background-size: 100%;
   transform: translateZ(-10px) scale(2.1);
   z-index: -2;
-  margin-bottom: 3em;
+  /* margin-bottom: 3em; */
 }
 
 header {
@@ -189,14 +189,15 @@ main {
 
 .about {
   color: #aaa;
+  letter-spacing: 1px;
 }
 
 .main1 .about::before {
   display: inline-block;
   margin: 4px 10px;
   content: "";
-  width: 100px;
-  height: 1px;
+  width: 120px;
+  height: 1.5px;
   background-color: rgb(255, 222, 158);
 }
 
@@ -333,14 +334,15 @@ main {
 
 .main3 .service {
   color: #aaa;
+  letter-spacing: 1px;
 }
 
 .main3 .service::after {
   display: inline-block;
-  margin: 4px 10px;
+  margin: 5px 10px;
   content: "";
   width: 120px;
-  height: 1px;
+  height: 1.5px;
   background-color: rgb(255, 222, 158);
 }
 
@@ -416,17 +418,18 @@ main {
 
 .main4 {
   width: 80%;
-  height: 100vh;
+  min-height: 100vh;
   margin: auto;
 }
 
 .main4 .portfolio {
   color: #aaa;
+  letter-spacing: 1px;
 }
 
 .main4 .portfolio::after {
   background-color: rgb(255, 196, 81);
-  height: 1px;
+  height: 1.5px;
   width: 120px;
   display: inline-block;
   content: "";
@@ -734,4 +737,59 @@ main {
 .foto6 .ikonice i:hover {
   color: rgb(255, 196, 81);
   cursor: pointer;
+}
+
+.main5 {
+  width: 80%;
+  height: 80vh;
+  margin: auto;
+  display: flex;
+  gap: 2em;
+}
+
+.main5 .slika2 {
+  width: 40%;
+  height: 100%;
+  background-image: url(./side-view-cropped-unrecognizable-business-people-working-common-desk.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.main5 .text2 {
+  width: 60%;
+  height: 100%;
+}
+
+.main5 .text2 .cards {
+  height: 80%;
+  margin-top: 1em;
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 150px 150px;
+
+  grid-column-gap: 1em;
+}
+
+.main5 .text2 .cards .card {
+  display: grid;
+
+  grid-template-columns: 1fr 9fr;
+  grid-template-rows: 50px 50px;
+
+  grid-column-gap: 1em;
+}
+
+.main5 .text2 .cards .card h1 {
+  align-self: end;
+}
+.main5 .text2 .cards .card p {
+  align-self: start;
+}
+
+.main5 .text2 .cards .card i {
+  color: rgb(255, 196, 81);
+  align-self: center;
+  font-size: 2em;
+  grid-row: span 2;
 }

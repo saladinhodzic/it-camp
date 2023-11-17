@@ -808,6 +808,7 @@ main {
   justify-content: center;
   align-items: center;
   padding: 0 10em;
+  margin-bottom: 10vh;
   gap: 0.25em;
 }
 
@@ -829,9 +830,24 @@ main {
   width: 80%;
   height: 100vh;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+.h3-team {
+  color: #aaa;
 }
 
-.ljudi {
+.h3-team::after {
+  display: inline-block;
+  background-color: rgb(255, 196, 81);
+  width: 120px;
+  height: 2px;
+  content: "";
+  margin: 7px 10px;
+}
+
+.team .ljudi {
   height: 50vh;
   display: grid;
 
@@ -842,32 +858,43 @@ main {
 .covek1 {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
   border-radius: 5px;
+
   /* border: 0.5px solid rgb(175, 172, 172); */
   box-shadow: 0px 19px 10px 0px rgba(212, 212, 212, 0.3);
 }
+
 .covek2 {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
   border-radius: 5px;
   /* border: 0.5px solid rgb(175, 172, 172); */
   box-shadow: 0px 19px 10px 0px rgba(212, 212, 212, 0.3);
 }
+
 .covek3 {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
   border-radius: 5px;
   /* border: 0.5px solid rgb(175, 172, 172); */
   box-shadow: 0px 19px 10px 0px rgba(212, 212, 212, 0.3);
+}
+
+.covek3 img {
+  height: 85%;
 }
 .covek4 {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
   border-radius: 5px;
   /* border: 0.5px solid rgb(175, 172, 172); */
   box-shadow: 0px 19px 10px 0px rgba(212, 212, 212, 0.3);
+}
+
+.covek4 img {
+  height: 85%;
 }

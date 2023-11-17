@@ -3,6 +3,11 @@
   box-sizing: border-box;
 }
 
+.parallax {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5em;
+}
+
 .parallax::-webkit-scrollbar {
   width: 1.5vw;
 }
@@ -448,7 +453,7 @@ main {
 }
 
 .foto1 {
-  background-image: url(../slikeGP/boy-filming-with-camcorder-yellow-scene.jpg);
+  background-image: url(../slike2/kamera\ zuta\ pozadina.jpg);
   background-size: 100%;
 
   grid-row: span 2;
@@ -482,7 +487,7 @@ main {
 
 .foto1:hover {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(../slikeGP/boy-filming-with-camcorder-yellow-scene.jpg);
+    url(../slike2/kamera\ zuta\ pozadina.jpg);
 }
 
 .foto1:hover h3,
@@ -498,7 +503,7 @@ main {
 }
 
 .foto2 {
-  background-image: url(../slikeGP/close-up-professional-digital-camera-tripod.jpg);
+  background-image: url(../slike2/macro\ camera.jpg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
 
@@ -531,7 +536,7 @@ main {
 
 .foto2:hover {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(../slikeGP/close-up-professional-digital-camera-tripod.jpg);
+    url(../slike2/macro\ camera.jpg);
 }
 
 .foto2:hover h3,
@@ -547,7 +552,7 @@ main {
 }
 
 .foto3 {
-  background-image: url(../slikeGP/part-acoustic-guitar-guitar-fretboard-with-strings-black-background-with-highlights.jpg);
+  background-image: url(../slike2/gitara.jpg);
   background-size: 100%;
 
   transition: all 0.2s ease-in-out;
@@ -579,7 +584,7 @@ main {
 
 .foto3:hover {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(../slikeGP/part-acoustic-guitar-guitar-fretboard-with-strings-black-background-with-highlights.jpg);
+    url(../slike2/gitara.jpg);
 }
 
 .foto3:hover h3,
@@ -595,7 +600,7 @@ main {
 }
 
 .foto4 {
-  background-image: url(../slikeGP/hand-holding-photo-camera.jpg);
+  background-image: url(../slike2/camera\ in\ hand.jpg);
   background-size: 100%;
 
   grid-row: span 2;
@@ -629,7 +634,7 @@ main {
 
 .foto4:hover {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(../slikeGP/hand-holding-photo-camera.jpg);
+    url(../slike2/camera\ in\ hand.jpg);
 }
 
 .foto4:hover h3,
@@ -645,7 +650,7 @@ main {
 }
 
 .foto5 {
-  background-image: url(../slikeGP/fresh-yellow-daisy-single-flower-close-up-beauty-generated-by-ai.jpg);
+  background-image: url(../slike2/cvetic.jpg);
   background-size: 100%;
 
   transition: all 0.2s ease-in-out;
@@ -676,7 +681,7 @@ main {
 
 .foto5:hover {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(../slikeGP/fresh-yellow-daisy-single-flower-close-up-beauty-generated-by-ai.jpg);
+    url(../slike2/cvetic.jpg);
 }
 
 .foto5:hover h3,
@@ -692,7 +697,7 @@ main {
 }
 
 .foto6 {
-  background-image: url(../slikeGP/drummer-using-drum-sticks-hitting-snare-drum-with-splashing-water-black-background-studio-lighting-close-up.jpg);
+  background-image: url(../slike2/bubnjevi.jpg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
 
@@ -725,7 +730,7 @@ main {
 
 .foto6:hover {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(../slikeGP/drummer-using-drum-sticks-hitting-snare-drum-with-splashing-water-black-background-studio-lighting-close-up.jpg);
+    url(../slike2/bubnjevi.jpg);
 }
 
 .foto6:hover h3,
@@ -848,7 +853,7 @@ main {
 }
 
 .team .ljudi {
-  height: 50vh;
+  height: 65vh;
   display: grid;
 
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -865,6 +870,38 @@ main {
   box-shadow: 0px 19px 10px 0px rgba(212, 212, 212, 0.3);
 }
 
+.covek1 .slika3 {
+  background-image: url(./handsome-young-guy-casual-clothing.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 90%;
+  display: flex;
+
+  justify-content: center;
+  align-items: flex-end;
+  gap: 0.5em;
+}
+
+.covek1 .slika3:hover i {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.covek1 .slika3 i {
+  font-size: 2em;
+  margin-bottom: 0.75em;
+  color: #444;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s;
+  cursor: pointer;
+  transform: translateY(-100%);
+}
+.covek1 .slika3 i:hover {
+  color: rgb(255, 196, 81);
+}
+
 .covek2 {
   display: flex;
   flex-direction: column;
@@ -872,6 +909,38 @@ main {
   border-radius: 5px;
   /* border: 0.5px solid rgb(175, 172, 172); */
   box-shadow: 0px 19px 10px 0px rgba(212, 212, 212, 0.3);
+}
+
+.covek2 .slika3 {
+  background-image: url(./zena.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 90%;
+  display: flex;
+
+  justify-content: center;
+  align-items: flex-end;
+  gap: 0.5em;
+}
+
+.covek2 .slika3:hover i {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.covek2 .slika3 i {
+  font-size: 2em;
+  margin-bottom: 0.75em;
+  color: #444;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s;
+  cursor: pointer;
+  transform: translateY(-100%);
+}
+.covek2 .slika3 i:hover {
+  color: rgb(255, 196, 81);
 }
 
 .covek3 {
@@ -883,9 +952,38 @@ main {
   box-shadow: 0px 19px 10px 0px rgba(212, 212, 212, 0.3);
 }
 
-.covek3 img {
-  height: 85%;
+.covek3 .slika3 {
+  background-image: url(./smiling-male-entrepreneur-with-beard-mustache-crossing-arms-chest.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 90%;
+  display: flex;
+
+  justify-content: center;
+  align-items: flex-end;
+  gap: 0.5em;
 }
+
+.covek3 .slika3:hover i {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.covek3 .slika3 i {
+  font-size: 2em;
+  margin-bottom: 0.75em;
+  color: #444;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s;
+  cursor: pointer;
+  transform: translateY(-100%);
+}
+.covek3 .slika3 i:hover {
+  color: rgb(255, 196, 81);
+}
+
 .covek4 {
   display: flex;
   flex-direction: column;
@@ -895,6 +993,147 @@ main {
   box-shadow: 0px 19px 10px 0px rgba(212, 212, 212, 0.3);
 }
 
-.covek4 img {
-  height: 85%;
+.covek4 .slika3 {
+  background-image: url(./confident-middle-aged-woman-portrait.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 90%;
+  display: flex;
+
+  justify-content: center;
+  align-items: flex-end;
+  gap: 0.5em;
+}
+
+.covek4 .slika3:hover i {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.covek4 .slika3 i {
+  font-size: 2em;
+  margin-bottom: 0.75em;
+  color: #444;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s;
+  cursor: pointer;
+  transform: translateY(-100%);
+}
+.covek4 .slika3 i:hover {
+  color: rgb(255, 196, 81);
+}
+
+.main6 {
+  background-color: #222;
+  height: 60vh;
+  width: 100%;
+}
+
+.footer h3,
+.footer p,
+.footer a {
+  color: #fff;
+}
+
+.footer {
+  height: 100%;
+  width: 80%;
+  margin: auto;
+  display: grid;
+  padding-top: 5em;
+
+  grid-template-columns: 3fr 2fr 2fr 4fr;
+  grid-template-rows: 5fr 2fr;
+
+  /* grid-column-gap: 2em; */
+}
+
+.footer .col1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 2em;
+}
+
+.footer .col1 h3 {
+  font-size: 2em;
+}
+
+.footer .col1 h3::after {
+  display: inline-block;
+  content: "";
+  width: 12px;
+  height: 12px;
+  margin-left: 10px;
+  background-color: orange;
+}
+
+.footer .col2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1em;
+}
+
+.footer .col2 a {
+  text-decoration: none;
+  transition: color 0.1s;
+}
+.footer .col2 a:hover {
+  color: orange;
+}
+
+.footer .col3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1em;
+}
+
+.footer .col3 a {
+  text-decoration: none;
+  transition: color 0.1s;
+}
+.footer .col3 a:hover {
+  color: orange;
+}
+
+.footer .col4 {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.footer .col4 div {
+  height: 2em;
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+.footer .col4 input {
+  width: 100%;
+}
+
+.footer .col4 button {
+  position: absolute;
+  right: 0;
+  width: 30%;
+  height: 100%;
+  background-color: orange;
+  border: 0;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.footer .red2 {
+  /* width: 100vw;
+  background-color: #111; */
+  grid-column: span 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
 }

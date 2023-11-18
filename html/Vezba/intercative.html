@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <style>
+    .sajt {
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .slika {
+      background-image: url(./slikeinteractive/komp.png);
+      width: 50%;
+      height: 60vh;
+      background-size: contain;
+      position: relative;
+    }
+
+    .slika img:nth-of-type(1) {
+      position: absolute;
+      top: 5em;
+      left: 11em;
+      transition: all 1s ease-in-out;
+    }
+    .slika img:nth-of-type(2) {
+      position: absolute;
+      top: 5em;
+      left: 13em;
+      transition: all 1s ease-in-out;
+
+    }
+
+    .slika:hover img:nth-of-type(1){
+        transform: translateY(-150%);
+
+    }
+    .slika:hover img:nth-of-type(2){
+        transform: translateY(150%);
+
+    }
+    </style>
+    <div class="sajt">
+    <div class="slika">
+        <img 
+          src="./slikeinteractive/strelica-gore.png"
+          alt=""
+          width="30px "
+          height="50px"
+        />
+        <img
+          src="./slikeinteractive/strelica-dole.png"
+          alt=""
+          width="30px"
+          height="50px"
+        />
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  width: 100%;
+  height: 10vh;
+  background-color: #eeeeee;
+  display: flex;
+  align-items: center;
+  padding-left: 1em;
+}
+
+.link {
+  border: 0;
+  cursor: pointer;
+  font-size: 1.2em;
+  color: #888;
+  padding: 0;
+}
+
+.dropdown > .link:focus,
+.link:hover {
+  color: black;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  left: 0%;
+  top: calc(100% + 0.5em);
+  background-color: #fff;
+  padding: 1em;
+  border-radius: 5px;
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.2s ease-in-out;
+}
+/* focus ili kada nesto kliknemo
+ */
+/* > direktan child */
+
+.dropdown > .link:focus + .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+}

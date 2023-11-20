@@ -100,6 +100,24 @@
     .circle:hover {
       color: #fff;
     }
+
+    .underline::before {
+      content: "";
+      position: absolute;
+
+      bottom: 0;
+      left: 0;
+      right: 0;
+      transform: scaleX(0);
+      transition: transform 0.3s;
+      transform-origin: left;
+      height: 3px;
+      background-color: rgb(6, 149, 149);
+    }
+
+    .underline:hover::before {
+      transform: scaleX(1);
+    }
   </style>
   <body>
     <div class="dugmad">

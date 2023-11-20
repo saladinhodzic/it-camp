@@ -7,13 +7,19 @@
   </head>
 
   <style>
-    body {
+    * {
+      box-sizing: border-box;
+    }
+    .dugmad {
       display: flex;
       justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 20%;
+      height: 100vh;
     }
 
     button {
-      margin-top: 5em;
       font-size: 2em;
       padding: 1em 2em;
       border: 0;
@@ -39,8 +45,68 @@
       right: -8px;
       left: -8px;
     }
+
+    .slide {
+      z-index: 2;
+      transition: all 0.2s;
+    }
+    .slide::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background-color: rgb(6, 149, 149);
+      z-index: -1;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: all 0.2s;
+    }
+    .slide:hover::after {
+      transform: scaleX(1);
+    }
+
+    .slide:hover {
+      color: #fff;
+    }
+
+    .circle::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border-radius: 50%;
+      transform: scale(1.5);
+
+      background-color: #eee;
+      z-index: -1;
+      transition: all 0.5s;
+    }
+
+    .circle:hover::before {
+      transform: scale(0);
+    }
+
+    .circle {
+      z-index: 1;
+      overflow: hidden;
+      background-color: rgb(6, 149, 149);
+      transition: color 0.7s;
+    }
+
+    .circle:hover {
+      color: #fff;
+    }
   </style>
   <body>
-    <button class="pop">Pop out</button>
+    <div class="dugmad">
+      <button class="pop">Pop out</button>
+      <button class="slide">Slide</button>
+      <button class="circle">Circle</button>
+      <button class="underline">Underline</button>
+    </div>
   </body>
 </html>

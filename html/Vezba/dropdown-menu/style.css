@@ -45,7 +45,7 @@
  */
 /* > direktan child */
 
-.dropdown > .link:focus + .dropdown-menu {
+.dropdown > .link:hover + .dropdown-menu {
   opacity: 1;
   transform: translateY(0);
 }

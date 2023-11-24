@@ -6,7 +6,7 @@ naslov.style = "color:red; font-size:42px";
 
 //Da bismo znali tip promenljive u javiscriptu koristimo typeof operator
 
-//Tipovi podataka u javiscriptu delimo na primitivne i neprimitivne
+//Tipovi podatakaa u javiscriptu delimo na primitivne i neprimitivne
 
 //1. Primitivni tipovi podataka (vrednosni)
 //2. Neprimitvni tipovi podataka(referentni)
@@ -15,7 +15,7 @@ naslov.style = "color:red; font-size:42px";
 
 //1.1. Stringovi-Niz karaktera koji je zapisan pod navodnicima
 
-console.log("Ovo je nas prvi string");
+console.log("Ovo je nas prvi strings");
 console.log(typeof "Ovo je nas prvi string");
 
 //1.2. number - Predstavlja broj i on moze biti zapisan sa ili decimalnog zareza

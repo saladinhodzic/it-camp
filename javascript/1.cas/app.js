@@ -1,10 +1,4 @@
-naslov = document.getElementById("naslov");
-naslov.innerHTML = "Naslov ispisan preko javescripta";
-naslov.style = "color:red; font-size:42px";
-
-//TIPOVI PODATAKA //
-
-//Da bismo znali tip promenljive u javiscriptu koristimo typeof operator
+-nali tip promenljive u javiscriptu koristimo typeof operator
 
 //Tipovi podatakaa u javiscriptu delimo na primitivne i neprimitivne
 

@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #333;
+}
+
+.brojevi {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.red {
+  display: flex;
+  gap: 1em;
+}
+
+.red:nth-of-type(4) button {
+  background-color: orangered;
+}
+.red:nth-of-type(4) button:nth-of-type(2) {
+  background-color: black;
+}
+
+button {
+  position: relative;
+  background-color: black;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 0;
+  width: 2em;
+  height: 2em;
+  font-size: 2.5em;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1;
+}
+
+button:nth-of-type(4) {
+  background-color: orangered;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: #222;
+  transform: scale(0);
+  transition: all 0.1s ease-in-out;
+}
+
+button:hover::before {
+  transform: scale(1);
+}

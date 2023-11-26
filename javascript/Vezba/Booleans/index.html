@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booleans</title>
+  </head>
+  <body>
+    <script>
+      // operatori za uporedjivanje : < > >= <= === !==
+      console.log(3 < 5);
+
+      //   == uporedjuje (pretvara) string sa brojem , === ne dozvoljava uporedjivanje razlicitih tipova
+      console.log(5 === "5.00");
+
+      //   if - ako je true onda ce nam pokrenuti kod, ako je false onda nece
+      //   else - ce nam pokrenuti drugi kod ako je prvi false
+      if (false) {
+        console.log("hello");
+      } else {
+        console.log("else");
+      }
+
+      const age = 15;
+
+      if (age >= 16) {
+        console.log("You can drive");
+      } else if (age >= 14) {
+        console.log("Almost there!");
+      } else {
+        console.log("You cannot drive");
+      }
+      // && je zapravo AND operator gde gleda da li su obe strane tacne
+      console.log(5 < 3 && 3 < 5);
+      // || je zapravo OR ili ILI operator koji posmatra da je barem jedna strana tacna
+      console.log(5 < 3 || 3 < 5);
+      // ! ili NOT operator nam daje suprotan odgovor ako kazemo da je vrednost netacna on ce nam napisati true
+      console.log(!5 < 3);
+    </script>
+  </body>
+</html>

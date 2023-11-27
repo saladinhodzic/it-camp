@@ -36,6 +36,38 @@
       console.log(5 < 3 || 3 < 5);
       // ! ili NOT operator nam daje suprotan odgovor ako kazemo da je vrednost netacna on ce nam napisati true
       console.log(!5 < 3);
+
+      const cartQuantity = 5;
+      // imamo truthy i falsy vrednosti
+      // falsy vrednosti su (false 0 '' NaN undefined null)
+
+      //   cartQuantity je isto kao da smo napisali cartQuantity>0
+      if (cartQuantity) {
+        console.log("truthy value");
+      }
+      // ako je vrednost 0 onda nam nece prikazati nista u konzoli
+      if (!0) {
+        console.log("falsy");
+      }
+      // NaN - Not a Number nam govori da nije validna
+      console.log("nesto" - 3);
+
+      //   undefined nam govori da nismo definisali vrednost
+      let variable;
+      console.log(variable);
+
+      //   Precice:
+      const precica = true ? "truth" : "lie";
+      console.log(precica);
+
+      //   guard && - radi isto sto i if statement nece nam pokrenuti kod ako leva strana nije tacna
+      false && console.log("hello");
+
+      const variable1 = 5 && "hello";
+      console.log(variable1);
+
+      const currency = undefined || "USD";
+      console.log(currency);
     </script>
   </body>
 </html>

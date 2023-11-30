@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function greet(name) {
+        if (!name) {
+          console.log("hi there");
+        } else {
+          console.log(`hello ${name}`);
+        }
+      }
+
+      greet("saki");
+      greet();
+
+      function convertToFahrenheit(celsius) {
+        fahrenheit = (celsius * 9) / 5 + 32;
+        console.log(fahrenheit);
+      }
+
+      convertToFahrenheit(25);
+
+      function convertToCelsius(fahrenheit) {
+        celsius = ((fahrenheit - 32) * 5) / 9;
+        console.log(celsius);
+      }
+
+      convertToCelsius(86);
+
+      function convertInCelsius(fahrenheit) {
+        return ((fahrenheit - 32) * 5) / 9;
+      }
+      function convertInFahrenheit(celsius) {
+        return (celsius * 9) / 5 + 32;
+      }
+
+      function convertTemperature(degrees, unit) {
+        if (unit === "C") {
+          const result = convertInFahrenheit(degrees);
+          return `${result}F `;
+        } else if (unit === "F") {
+          const result = convertInCelsius(degrees);
+          return `${result}C`;
+        }
+      }
+
+      console.log(convertTemperature(35, "C"));
+      console.log(convertTemperature(100, "F"));
+    </script>
+  </body>
+</html>

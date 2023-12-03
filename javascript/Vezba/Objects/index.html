@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objects</title>
+  </head>
+  <body>
+    <script>
+      const product = {
+        name: "carape",
+        price: 100,
+      };
+      console.log(product);
+      console.log(product.price);
+
+      product.name = "podmajice";
+      console.log(product);
+
+      //   Mozemo dodati property u object
+      product.newProperty = "lepo";
+      console.log(product);
+
+      //   Takodje mozemo izbrisati property
+      delete product.newProperty;
+      console.log(product);
+
+      //   Jos jedan nacin da pristupimo property jeste preko square brackets []
+      // koristimo ga kada ne mozemo normalno pristupiti property preko dot notation
+      const product2 = {
+        name: "lepo",
+        rating: {
+          stars: 4.5,
+          count: 56,
+        },
+        fun: function function1() {
+          console.log("Function inside an object");
+        },
+      };
+      console.log(product2["name"]);
+      console.log(product2.rating.count);
+      //   funkcija u objectu se naziva metoda
+      product2.fun();
+
+      //   JSON objekti imaju manje karaktersitika od obicnog JS objekta, ali je univerzalan medju jezicima i zato se koristi
+      console.log(JSON.stringify(product2));
+      //JSON parse da bismo vratili u obican JS objekat
+      console.log(JSON.parse(JSON.stringify(product2)));
+
+      //   localStorage koristimo da bismo sacuvali neku vrednost na duzi period(i posle refresanja stranice)
+      // definisemo je sa localStorage.setItem('keyword,"vrednost")
+      // onda je prikazujemo localStorage.getItem('keyword')
+
+      // null vrednost koristimo kada hocemo namerno da ostavimo nedefinisanu vrednost
+
+      // stringovi takodje imaju metode i property , to je zato sto nam JS okruzuje element sa AUTO BOXING
+      // length nam govori koliko karaktera ima string
+      console.log("hello world".length);
+      // toUpperCase() nam daje upper case
+      console.log("hello".toUpperCase());
+
+      const object1 = {
+        name: "Saladin",
+      };
+      // ako promenimo vrednost u prvom objektu promenice se i u drugom jer su oni zapravo samo reference ka nekoj memoriji gde su sacuvane ove reference(objekti)
+      // mozemo menjati vrednost const objekta ali ne mozemo deklarisati opet novo ime
+      const object2 = object1;
+      object1.name = "Markis";
+      console.log(object1);
+      console.log(object2);
+      // nisu direktno uporedivi jer njihove reference zauzimaju drugaciju poziciju u memoriji iako su im vrednosti jednake
+      const object3 = {
+        name: "Markis",
+      };
+
+      console.log(object1 === object3);
+      // ima jos nacina za pristupanje propertija
+      const object4 = {
+        name: "Markis",
+        prezime: "Hakic",
+      };
+
+      // const name = object4.name;
+      const { name, prezime } = object4;
+      console.log(name);
+      console.log(prezime);
+
+      const object5 = {
+        // name: name,
+        name,
+        // method: function function1() {
+        //   console.log("hello");
+        // },
+        method() {
+          console.log("hello");
+        },
+      };
+      console.log(object5);
+      object5.method();
+    </script>
+  </body>
+</html>

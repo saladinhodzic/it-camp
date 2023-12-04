@@ -24,7 +24,11 @@
 
     <button
       onclick="
+      score.wins=0;
+      score.losses=0;
    localStorage.removeItem('score')
+console.log('You reseted the score')
+   console.log(score)
     "
     >
       Reset Score

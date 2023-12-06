@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const godine = +prompt("Unesite broj godina");
+
+      if (isNaN(godine)) {
+        console.log("Niste uneli broj godine");
+      } else if (godine < 0) {
+        console.log("Ne mozete uneti negativan broj");
+      }
+      if (godine < 12 && godine > 0) {
+        console.log("Vi ste decijeg doba.");
+      } else if (godine >= 12 && godine < 18) {
+        console.log("Vi ste maloletni.");
+      } else if (godine >= 18 && godine < 40) {
+        console.log("Vi ste punoletni.");
+      } else if (godine >= 40) {
+        console.log("Vi ste zrela osoba.");
+      }
+
+      const proveraBroja = Number(prompt("Unesite broj"));
+
+      if (proveraBroja < 0) {
+        console.log("Uneli ste negativan broj");
+      } else if (proveraBroja === 0) {
+        console.log("Uneli ste nulu");
+      } else {
+        console.log("Uneli ste pozitivan broj");
+      }
+    </script>
+  </body>
+</html>

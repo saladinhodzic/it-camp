@@ -102,15 +102,7 @@
         Pokupi pare
       </button>
 
-      <button
-        onclick="
-
-    
-      
-      "
-      >
-        +200
-      </button>
+      <p class="js-suma"></p>
     </div>
     <script>
       function calculation(sansa, rezultat) {
@@ -121,9 +113,12 @@
         } else {
           result = 0;
         }
-
+        document.querySelector(
+          ".js-suma"
+        ).innerHTML = `Osvojena suma:${result}$`;
         console.log(`Osvojena suma:${result}$`);
       }
+
       let result = 0;
     </script>
   </body>

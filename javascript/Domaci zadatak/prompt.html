@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Provera broja:
+      // Napiši program koji će tražiti od korisnika da unese broj, a zatim ispiši poruku koja će reći da li je broj pozitivan, negativan ili nula.
+
+      // Ocena studenta:
+      // Napiši program koji će korisnika pitati za unos ocene (broj između 0 i 100) i ispisati odgovarajuću ocenu (A, B, C, D ili F) prema standardnom školskom sistemu ocenjivanja.
+
+      // Provera parnosti broja:
+      // Napiši program koji će korisnika pitati za unos broja, a zatim ispisati poruku da li je broj paran ili neparan.
+
+      // Upoređivanje dva broja:
+      // Napiši program koji će tražiti od korisnika da unese dva broja, a zatim ispisati poruku koja će reći koji od ta dva broja je veći, ili da su jednaki.
+
+      //   1.
+
+      const proveraBroja = Number(prompt("Unesite broj"));
+
+      if (isNaN(proveraBroja)) {
+        console.log("Niste uneli broj");
+      } else if (proveraBroja < 0) {
+        console.log("Uneli ste negativan broj");
+      } else if (proveraBroja === 0) {
+        console.log("Uneli ste broj jedank nuli");
+      } else {
+        console.log("Uneli ste pozitivan broj");
+      }
+
+      //   2.
+
+      const brojBodova = +prompt("Unesite broj bodova(0-100)");
+
+      if (isNaN(brojBodova)) {
+        console.log("Niste uneli ispravnu vrednost");
+      } else if (brojBodova < 0) {
+        console.log("Ne mozete uneti broj manji od nule ");
+      } else if (brojBodova > 100) {
+        console.log("Uneti broj nije validan");
+      } else if (brojBodova < 60) {
+        console.log(`Vasa ocena : F`);
+      } else if (brojBodova >= 60 && brojBodova < 70) {
+        console.log(`Vasa ocena : D`);
+      } else if (brojBodova >= 70 && brojBodova < 80) {
+        console.log(`Vasa ocena : C`);
+      } else if (brojBodova >= 80 && brojBodova < 90) {
+        console.log(`Vasa ocena : B`);
+      } else {
+        console.log(`Vasa ocena : A`);
+      }
+
+      //   3.
+
+      const proveriParnost = Number(prompt("Unesite vas broj"));
+
+      if (proveriParnost % 2 === 0) {
+        console.log("Vas broj je paran");
+      } else {
+        console.log("Vas broj je neparan");
+      }
+
+      //   4.
+
+      const uporediBroj1 = +prompt("Unesite vas prvi broj");
+      const uporediBroj2 = Number(prompt("Unesite vas drugi broj"));
+
+      if (isNaN(uporediBroj1, uporediBroj2)) {
+        console.log("Niste uneli ispravnu vrednost");
+      } else if (uporediBroj1 === uporediBroj2) {
+        console.log("Brojevi koje ste uneli su jednaki");
+      } else if (uporediBroj1 < uporediBroj2) {
+        console.log(`Drugi broj je veci : ${uporediBroj2}`);
+      } else {
+        console.log(`Prvi broj je veci : ${uporediBroj1}`);
+      }
+    </script>
+  </body>
+</html>

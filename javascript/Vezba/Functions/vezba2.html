@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button
+      onclick="
+        nadjiAjsu('Ajsa');
+        "
+    >
+      AJSA
+    </button>
+    <button
+      onclick="
+    nadjiAjsu('Ajsa');
+    "
+    >
+      AJSA
+    </button>
+    <button
+      onclick="
+    nadjiAjsu('Ajsa');
+    "
+    >
+      AJSA
+    </button>
+    <script>
+      function nadjiAjsu(myMove) {
+        const ajsa = Math.random();
+        if (myMove === "Ajsa") {
+          if (ajsa < 1 / 3) {
+            alert("Ajsa je ovde");
+          } else if (ajsa > 1 / 3) {
+            alert("Ajsa nije ovde");
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

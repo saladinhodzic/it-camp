@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Youtube subscribe button</p>
+
+    <button
+      onclick="
+subscribe()
+    "
+      class="js-subscribe"
+    >
+      Subscribe
+    </button>
+    <script>
+      function subscribe() {
+        const subscribeElement = document.querySelector(".js-subscribe");
+        // innerText ako imamo nekih razmaka on nam odmah konta
+        if (subscribeElement.innerText === "Subscribe") {
+          subscribeElement.innerHTML = "Subscribed";
+        } else {
+          subscribeElement.innerHTML = "Subscribe";
+        }
+      }
+    </script>
+  </body>
+</html>

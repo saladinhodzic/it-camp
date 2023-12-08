@@ -9,7 +9,20 @@
   <body>
     <div class="header">
       <div class="dropdown">
-        <button class="link">Information</button>
+        <button
+          onclick="
+       const linkButton=   document.querySelector('.dropdown-menu')
+
+       if(linkButton.style ='display:none'){
+        linkButton.style = 'display:inline-block'
+       }else {
+        linkButton.style= 'display:none'
+       }
+          "
+          class="link"
+        >
+          Information
+        </button>
         <div class="dropdown-menu">Dropdown Content</div>
       </div>
     </div>

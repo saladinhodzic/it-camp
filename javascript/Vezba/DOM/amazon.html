@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Amazon Shipping Calculator</p>
+    <input
+      class="js-input"
+      placeholder="Unesi cenu"
+      onkeydown="
+      onEnter()
+      "
+    />
+    <!-- onkeydown je event kao i onclick i on ima svoje event objecte -->
+    <!--  event.key nam govori koji smo taster pritisli -->
+    <button
+      onclick="
+    totalCost(nesto)
+    "
+    >
+      Calculate
+    </button>
+    <p class="js-cost"></p>
+    <script>
+      // mozemo i pretvoriti number u string
+      String(25);
+      // cudno ponasanje stringova - ako moze string da se pretvori u broj js ce to i uraditi
+      console.log("25" - 5);
+      // window object predstavlja ceo browser
+      //   ne moramo pisati window ispred jer js automatski dodaje to u pozadini
+      window;
+      window.console.log("window");
+      window.alert();
+      function onEnter(nesto) {
+        if (event.key === "Enter") {
+          totalCost();
+        }
+      }
+      function totalCost() {
+        const inputNumber = document.querySelector(".js-input");
+        // .value da bismo pristupili vrednosti inputa sto korisnik unese
+        let cost = Number(inputNumber.value);
+        if (cost < 40) {
+          cost += 10;
+        } else {
+          cost;
+        }
+
+        document.querySelector(".js-cost").innerHTML = `$${cost}`;
+      }
+    </script>
+  </body>
+</html>

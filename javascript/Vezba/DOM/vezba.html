@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 1. -->
+    <button class="dugme">9a</button>
+    <button class="dugme2">9b</button>
+    <!-- 2. -->
+    <button
+      class="heads"
+      onclick="
+      coinSide('heads')
+    "
+    >
+      heads
+    </button>
+    <button
+      class="tails"
+      onclick="
+    coinSide('tails')
+    "
+    >
+      tails
+    </button>
+    <p class="chose"></p>
+
+    <!-- 3. -->
+
+    <input
+      class="input"
+      placeholder="Unesite vase ime"
+      onkeydown="
+onEnter1()
+    "
+    />
+    <button
+      onclick="
+unesiteVaseIme()
+    "
+    >
+      Submit
+    </button>
+    <p class="ime"></p>
+
+    <!-- 4. -->
+    <input
+      class="onkeyup"
+      onkeyup="
+      onKeyUp()
+ "
+    />
+    <p class="showText"></p>
+    <script>
+      // 1.
+      console.log(document.querySelector(".dugme"));
+      document.querySelector(".dugme2").innerHTML = "9b done!";
+      // 2.
+      function coinSide(side) {
+        document.querySelector(".chose").innerHTML = `You chose ${side}`;
+      }
+      //   3.
+      function unesiteVaseIme() {
+        const unetoIme = document.querySelector(".input");
+        const ime = unetoIme.value;
+
+        document.querySelector(".ime").innerHTML = `Vase ime je ${ime}`;
+      }
+      function onEnter1() {
+        if (event.key === "Enter") {
+          unesiteVaseIme();
+        }
+      }
+
+      //   4.
+      function onKeyUp() {
+        const polje = document.querySelector(".onkeyup");
+        document.querySelector(".showText").innerHTML = polje.value;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button
+      onclick="
+      console.log(`Cart quantity:${cartQuantity}`);"
+    >
+      Show Quantity
+    </button>
+    <!-- ++ nam povecava vrednost za 1 -->
+    <button
+      onclick="
+updateCartQuantity(1);
+  "
+    >
+      Add to Cart
+    </button>
+    <!-- += nam povecava vrednost za broj koji hocemo -->
+    <button
+      onclick="
+  updateCartQuantity(2);
+
+  "
+    >
+      +2
+    </button>
+    <button
+      onclick="
+ updateCartQuantity(3);
+
+  "
+    >
+      +3
+    </button>
+
+    <button
+      onclick="
+updateCartQuantity(4);
+
+  "
+    >
+      +4
+    </button>
+
+    <button
+      onclick="
+updateCartQuantity(5);
+
+  "
+    >
+      +5
+    </button>
+
+    <button
+      onclick="
+updateCartQuantity(-1);
+
+  "
+    >
+      -1
+    </button>
+    <button
+      onclick="
+updateCartQuantity(-2);
+
+  "
+    >
+      -2
+    </button>
+    <button
+      onclick="
+    updateCartQuantity(-3);
+    "
+    >
+      -3
+    </button>
+
+    <button
+      onclick="
+  cartQuantity = 0
+  console.log('Cart was reset.');
+  console.log(`Cart quantity:${cartQuantity}`);
+  "
+    >
+      Reset Cart
+    </button>
+
+    <p class="js-cart"></p>
+    <script>
+      let cartQuantity = 0;
+      displayCount();
+
+      function updateCartQuantity(value) {
+        if (cartQuantity + value > 10) {
+          alert("Cart is full!");
+          return;
+        }
+        if (cartQuantity + value < 0) {
+          alert("Not enough items!");
+          return;
+        }
+        cartQuantity += value;
+        displayCount();
+      }
+      function displayCount() {
+        document.querySelector(
+          ".js-cart"
+        ).innerHTML = `Cart quantity: ${cartQuantity}`;
+      }
+    </script>
+  </body>
+</html>

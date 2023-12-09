@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Izaberite voce i kolicinu koju zelite</p>
+    <button
+      onclick="
+    korpa('Banana')
+    "
+    >
+      Banana
+    </button>
+    <button
+      onclick="
+    korpa('Jabuka')
+    "
+    >
+      Jabuka
+    </button>
+    <button
+      onclick="
+    korpa('Mandarina')
+    "
+    >
+      Mandarina
+    </button>
+    <p class="voce"></p>
+
+    <button
+      onclick="
+    kupiNamirnice()
+    "
+    >
+      Kupi
+    </button>
+    <p class="kupovina"></p>
+    <script>
+      let kolicina = {
+        kolicina1: 0,
+        kolicina2: 0,
+        kolicina3: 0,
+      };
+
+      document.querySelector(
+        ".voce"
+      ).innerHTML = `Banana  : ${kolicina.kolicina1}
+         Jabuka : ${kolicina.kolicina2} Mandarina : ${kolicina.kolicina3}`;
+
+      function korpa(voce) {
+        if (voce === "Banana") {
+          kolicina.kolicina1 = kolicina.kolicina1 + 1;
+        } else if (voce === "Jabuka") {
+          kolicina.kolicina2 = kolicina.kolicina2 + 1;
+        } else if (voce === "Mandarina") {
+          kolicina.kolicina3 = kolicina.kolicina3 + 1;
+        }
+        let result = `Banana  : ${kolicina.kolicina1}
+         Jabuka : ${kolicina.kolicina2} Mandarina : ${kolicina.kolicina3}
+         `;
+
+        document.querySelector(".voce").innerHTML = result;
+      }
+
+      function kupiNamirnice() {
+        let result = `Banana  : ${kolicina.kolicina1}
+         Jabuka : ${kolicina.kolicina2} Mandarina : ${kolicina.kolicina3}
+         `;
+        let kupovina = (document.querySelector(
+          ".kupovina"
+        ).innerHTML = `Kupili ste :<br>${result}`);
+      }
+    </script>
+  </body>
+</html>

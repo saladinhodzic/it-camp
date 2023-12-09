@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Domaci zadaci:
+      // 1.
+      // Napisati program koji na osnovu dva uneta broja od strane korisnika ispisuje:
+      // Povrsinu kvadrata ako su uneti brojevi jednaki,
+      // Povrsinu pravougaonika ako su uneti brojevi razliciti.
+
+      // 2. Zadatak - switch naredba
+      // Korisnik unosi dva realna broja x i y. Napisati program koji izracunava i stampa
+      // kolicnik x/y, ako je broj y razlicit od nule,
+      // a inace ispisuje poruku: Deljenje je nemoguce.
+
+      // 3. Sezona godine:
+      // Napiši program koji će korisnika pitati za unos meseca (broj između 1 i 12) i ispisati odgovarajuću sezonu godine.
+
+      // 4. Kalkulator operacija:
+      // Napiši program koji će tražiti od korisnika da unese dva broja i operaciju (‘+’, ‘-’, ‘*’, ‘/’), a zatim ispisati rezultat te operacije.
+
+      //   1.
+
+      const broj1 = Number(prompt("Unesite prvi broj"));
+      const broj2 = +prompt("Unesite drugi broj");
+
+      if (broj1 === broj2) {
+        console.log(`Povrsina kvadrata: ${broj1 * broj2}`);
+      } else {
+        console.log(`Povrsina pravogaunika: ${broj1 * broj2}`);
+      }
+
+      //   2.
+
+      const x = +prompt("Unesite vas prvi broj");
+      const y = +prompt("Unesite vas drugi broj");
+
+      let result;
+
+      switch (true) {
+        case y === 0:
+          console.log("Deljenje nije moguce");
+          break;
+        default:
+          result = x / y;
+          console.log(result);
+      }
+    </script>
+  </body>
+</html>

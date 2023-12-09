@@ -29,10 +29,12 @@
       const broj1 = Number(prompt("Unesite prvi broj"));
       const broj2 = +prompt("Unesite drugi broj");
 
-      if (broj1 === broj2) {
-        console.log(`Povrsina kvadrata: ${broj1 * broj2}`);
-      } else {
-        console.log(`Povrsina pravogaunika: ${broj1 * broj2}`);
+      switch (true) {
+        case broj1 === broj2:
+          console.log("Povrsina kvadrata: " + broj1 * broj2);
+          break;
+        default:
+          console.log("Povrsina pravogaunika: " + broj1 * broj2);
       }
 
       //   2.
@@ -40,15 +42,83 @@
       const x = +prompt("Unesite vas prvi broj");
       const y = +prompt("Unesite vas drugi broj");
 
-      let result;
-
       switch (true) {
         case y === 0:
           console.log("Deljenje nije moguce");
           break;
         default:
-          result = x / y;
+          let result = x / y;
           console.log(result);
+      }
+
+      //   3.
+      const mesec = +prompt("Unesite broj 1-12");
+      switch (mesec) {
+        case 1:
+          console.log("Januar");
+          break;
+        case 2:
+          console.log("Februar");
+          break;
+        case 3:
+          console.log("Mart");
+          break;
+        case 4:
+          console.log("April");
+          break;
+        case 5:
+          console.log("Maj");
+          break;
+        case 6:
+          console.log("Jun");
+          break;
+        case 7:
+          console.log("Jul");
+          break;
+        case 8:
+          console.log("Avgust");
+          break;
+        case 9:
+          console.log("Septembar");
+          break;
+        case 10:
+          console.log("Oktobar");
+          break;
+        case 11:
+          console.log("Novembar");
+          break;
+        case 12:
+          console.log("Decembar");
+          break;
+        default:
+          console.log("Niste uneli zeljenu vrednost");
+      }
+
+      //   4.
+      const a = +prompt("Unesite prvi broj");
+      const b = +prompt("Unesite drugi broj");
+      const izracunaj = prompt("Unesite operaciju");
+
+      switch (izracunaj) {
+        case "+":
+          result = a + b;
+          console.log(result);
+          break;
+        case "-":
+          result = a - b;
+          console.log(result);
+
+          break;
+        case "*":
+          result = a * b;
+          console.log(result);
+          break;
+        case "/":
+          result = a / b;
+          console.log(result);
+          break;
+        default:
+          console.log("Niste uneli zeljenu vrednost");
       }
     </script>
   </body>

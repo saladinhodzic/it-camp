@@ -4,38 +4,78 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poiret+One&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: rgb(25, 25, 25);
+        color: #fff;
+        font-family: "Poppins";
+      }
+      .title {
+        font-size: 2em;
+      }
+      img {
+        height: 70px;
+      }
+      .vocka {
+        background-color: transparent;
+        border: 3px solid #888;
+        cursor: pointer;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin: 0em 0.5em 1.5em 0;
+      }
+      .kupi {
+        border: none;
+        background-color: #fff;
+        font-size: 1em;
+        padding: 0.75em 1.5em;
+        cursor: pointer;
+      }
+    </style>
   </head>
   <body>
-    <p>Izaberite voce i kolicinu koju zelite</p>
+    <p class="title">Izaberite voce i kolicinu koju zelite</p>
     <button
+      class="vocka"
       onclick="
     korpa('Banana')
     "
     >
-      Banana
+      <img src="./emoji/banana_5668378.png" alt="" />
     </button>
     <button
+      class="vocka"
       onclick="
     korpa('Jabuka')
     "
     >
-      Jabuka
+      <img src="./emoji/apple_5646072.png" alt="" />
     </button>
     <button
+      class="vocka"
       onclick="
     korpa('Mandarina')
     "
     >
-      Mandarina
+      <img src="./emoji/orange_10056466.png" alt="" />
     </button>
     <p class="voce"></p>
 
     <button
+      class="kupi"
       onclick="
+      
     kupiNamirnice()
     "
     >
-      Kupi
+      Kupi namirnice
     </button>
     <p class="kupovina"></p>
     <script>

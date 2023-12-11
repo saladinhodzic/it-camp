@@ -27,3 +27,42 @@
   font-family: Arial, Helvetica, sans-serif;
   cursor: pointer;
 }
+
+.gaming {
+  background-color: rgb(225, 225, 225);
+  color: black;
+  border: none;
+  font-size: 1em;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.music {
+  background-color: rgb(225, 225, 225);
+  color: black;
+  border: none;
+  font-size: 1em;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.tech {
+  background-color: rgb(225, 225, 225);
+  color: black;
+  border: none;
+  font-size: 1em;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.is-toggled {
+  background-color: black;
+  color: #fff;
+  border: none;
+  font-size: 1em;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}

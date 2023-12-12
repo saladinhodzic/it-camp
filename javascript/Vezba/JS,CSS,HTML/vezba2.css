@@ -1,0 +1,15 @@
+.unesi-text {
+  font-size: 1em;
+  padding: 10px;
+}
+.calculate {
+  background-color: green;
+  color: #fff;
+  border: none;
+  font-size: 1em;
+  padding: 12px 15px;
+  cursor: pointer;
+}
+.error {
+  color: red;
+}

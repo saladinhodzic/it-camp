@@ -19,6 +19,20 @@
       .title {
         font-size: 2em;
       }
+      .shop {
+        display: flex;
+        margin-bottom: 2em;
+        gap: 1em;
+      }
+      .dugme-voce {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .dugme-voce p {
+        font-size: 1.5em;
+        margin: 0%;
+      }
       img {
         height: 70px;
       }
@@ -38,34 +52,52 @@
         padding: 0.75em 1.5em;
         cursor: pointer;
       }
+      .skupi-novac {
+        border: none;
+        background-color: #fff;
+        font-size: 1em;
+        padding: 10px 15px;
+        cursor: pointer;
+      }
     </style>
   </head>
   <body>
     <p class="title">Izaberite voce i kolicinu koju zelite</p>
-    <button
-      class="vocka"
-      onclick="
+    <div class="shop">
+      <div class="dugme-voce">
+        <button
+          class="vocka"
+          onclick="
     korpa('Banana')
     "
-    >
-      <img src="./emoji/banana_5668378.png" alt="" />
-    </button>
-    <button
-      class="vocka"
-      onclick="
+        >
+          <img src="./emoji/banana_5668378.png" alt="" />
+        </button>
+        <p>1$</p>
+      </div>
+      <div class="dugme-voce">
+        <button
+          class="vocka"
+          onclick="
     korpa('Jabuka')
     "
-    >
-      <img src="./emoji/apple_5646072.png" alt="" />
-    </button>
-    <button
-      class="vocka"
-      onclick="
+        >
+          <img src="./emoji/apple_5646072.png" alt="" />
+        </button>
+        <p>2$</p>
+      </div>
+      <div class="dugme-voce">
+        <button
+          class="vocka"
+          onclick="
     korpa('Mandarina')
     "
-    >
-      <img src="./emoji/orange_10056466.png" alt="" />
-    </button>
+        >
+          <img src="./emoji/orange_10056466.png" alt="" />
+        </button>
+        <p>3$</p>
+      </div>
+    </div>
     <p class="voce"></p>
 
     <button
@@ -78,6 +110,27 @@
       Kupi namirnice
     </button>
     <p class="kupovina"></p>
+    <button
+      class="skupi-novac"
+      onclick="
+    osvojeniNovac()
+    "
+    >
+      +1$
+    </button>
+    <p class="budzet"></p>
+
+    <!-- <button
+      onclick="
+    kolicina.kolicina1 = 0;
+    kolicina.kolicina2 = 0;
+    kolicina.kolicina3 = 0;
+    
+    "
+      class="isprazni-korpu"
+    >
+      Isprazni korpu
+    </button> -->
     <script>
       let kolicina = {
         kolicina1: 0,
@@ -92,11 +145,35 @@
 
       function korpa(voce) {
         if (voce === "Banana") {
-          kolicina.kolicina1 = kolicina.kolicina1 + 1;
+          const pare = document.querySelector(".budzet");
+          tap--;
+          if (tap < 0) {
+            tap = 0;
+            pare.innerHTML = "Nemate dovoljno para";
+          } else {
+            pare.innerHTML = `Vas budzet: ${tap}$`;
+            kolicina.kolicina1 = kolicina.kolicina1 + 1;
+          }
         } else if (voce === "Jabuka") {
-          kolicina.kolicina2 = kolicina.kolicina2 + 1;
+          const pare = document.querySelector(".budzet");
+          tap -= 2;
+          if (tap < 0) {
+            tap = 0;
+            pare.innerHTML = "Nemate dovoljno para";
+          } else {
+            pare.innerHTML = `Vas budzet: ${tap}$`;
+            kolicina.kolicina2 = kolicina.kolicina2 + 1;
+          }
         } else if (voce === "Mandarina") {
-          kolicina.kolicina3 = kolicina.kolicina3 + 1;
+          tap -= 3;
+          const pare = document.querySelector(".budzet");
+          if (tap < 0) {
+            tap = 0;
+            pare.innerHTML = "Nemate dovoljno para";
+          } else {
+            pare.innerHTML = `Vas budzet: ${tap}$`;
+            kolicina.kolicina3 = kolicina.kolicina3 + 1;
+          }
         }
         let result = `Banana  : ${kolicina.kolicina1}
          Jabuka : ${kolicina.kolicina2} Mandarina : ${kolicina.kolicina3}
@@ -106,13 +183,29 @@
       }
 
       function kupiNamirnice() {
-        let result = `Banana  : ${kolicina.kolicina1}
+        if (
+          kolicina.kolicina1 === 0 &&
+          kolicina.kolicina2 === 0 &&
+          kolicina.kolicina3 === 0
+        ) {
+          document.querySelector(".kupovina").innerHTML = "Niste nista kupili";
+        } else {
+          let result = `Banana  : ${kolicina.kolicina1}
          Jabuka : ${kolicina.kolicina2} Mandarina : ${kolicina.kolicina3}
          `;
-        let kupovina = (document.querySelector(
-          ".kupovina"
-        ).innerHTML = `Kupili ste :<br>${result}`);
+          let kupovina = (document.querySelector(
+            ".kupovina"
+          ).innerHTML = `Kupili ste :<br>${result}`);
+        }
       }
+
+      function osvojeniNovac() {
+        const pare = document.querySelector(".budzet");
+        tap++;
+        pare.innerHTML = `Vas budzet: ${tap}$`;
+      }
+      let tap = 0;
+      document.querySelector(".budzet").innerHTML = `Vas budzet: ${tap}$`;
     </script>
   </body>
 </html>

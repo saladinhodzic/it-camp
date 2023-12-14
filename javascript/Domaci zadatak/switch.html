@@ -29,12 +29,18 @@
       const broj1 = Number(prompt("Unesite prvi broj"));
       const broj2 = +prompt("Unesite drugi broj");
 
-      switch (true) {
-        case broj1 === broj2:
-          console.log("Povrsina kvadrata: " + broj1 * broj2);
-          break;
-        default:
-          console.log("Povrsina pravogaunika: " + broj1 * broj2);
+      //   switch (true) {
+      //     case broj1 === broj2:
+      //       console.log("Povrsina kvadrata: " + broj1 * broj2);
+      //       break;
+      //     default:
+      //       console.log("Povrsina pravogaunika: " + broj1 * broj2);
+      //   }
+
+      if (broj1 === broj2) {
+        console.log("Povrsina kvadrata je" + broj1 * broj2);
+      } else {
+        console.log("Povrsina pravogaunika je" + broj1 * broj2);
       }
 
       //   2.

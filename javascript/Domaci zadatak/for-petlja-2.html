@@ -15,22 +15,22 @@
       // Izracunati aritmeticku sredinu brojeva koji su deljivi sa 3.
       // Iteracija se vrsi od 3 do 17.
 
-      // for (let i = 99; i >= -99; i--) {
-      //   if (i % 4 === 0) {
-      //     const zbirBroj = i + 14;
-      //     console.log(zbirBroj);
-      //   }
-      // }
+      for (let i = 99; i >= -99; i--) {
+        if (i % 4 === 0) {
+          const zbirBroj = i + 14;
+          console.log(zbirBroj);
+        }
+      }
 
-      // let deljiv3 = 0;
-      // let brojIteracija = 0;
-      // for (let i = 3; i <= 17; i++) {
-      //   if (i % 3 === 0) {
-      //     deljiv3 += i;
-      //     brojIteracija += 1;
-      //   }
-      // }
-      // console.log(deljiv3 / brojIteracija);
+      let brojevi = 0;
+      let brojIteracija = 0;
+      for (let i = 3; i <= 17; i++) {
+        if (i % 3 === 0) {
+          brojevi += i;
+          brojIteracija += 1;
+        }
+      }
+      console.log(brojevi / brojIteracija);
     </script>
   </body>
 </html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrays and loops</title>
+  </head>
+  <body>
+    <script>
+      // arrays ili nizove pisemo u [zagradama] i mozemo je sacuvati u promenljivu
+      const myArray = [1, 2, 3];
+      console.log(myArray);
+      // da bismo nasli u nizu neku vrednost pocinjemo od 0 (u ovom primeru 0:1 , 1:2 ...)
+      //   broj pozicije u arrayu se zove index
+      console.log(myArray[0]);
+      //   mozemo promeniti vrednost u arrayu
+      myArray[0] = 60;
+      console.log(myArray[0]);
+
+      [1, "socks", true, [1, 2]];
+      //   array je po tipu objekat i zato ima svoje metode i propertije
+      console.log(Array.isArray(myArray));
+      // .length nam govori koliko imamo vrednosti u arrayu
+      console.log(myArray.length);
+      // .push() - metoda koja nam ubacuje novu vrednost na kraju naseg niza
+      myArray.push(4);
+      console.log(myArray);
+      // .splice() - metoda nam uklanja vrednost iz niza, zahteva unosenja dva broja
+      // prvi broj je index vrednosti , drugi broj je koliko zelimo vrednosti da uklonimo
+      myArray.splice(0, 1);
+      console.log(myArray);
+
+      //   loops nam dozvoljava da ponavljamo isti kod vise puta
+      let i = 1;
+
+      while (i <= 6) {
+        console.log(i);
+        i = i + 1;
+      }
+      // for petlja zahteva tri vrednsoti
+      for (let i = 1; i <= 6; i++) {
+        console.log(i);
+      }
+
+      let randomNumber = 0;
+
+      while (randomNumber < 0.5) {
+        randomNumber = Math.random();
+      }
+      console.log(randomNumber);
+
+      const niz = ["make dinner", "wash dishes", "watch youtube"];
+
+      for (let i = 0; i < niz.length; i++) {
+        const value = niz[i];
+        console.log(value);
+      }
+      // zelimo da prodjemo kroz sve brojeve u nizu i saberemo ih
+      const brojevi = [1, 1, 3];
+      let total = 0;
+      for (let i = 0; i < brojevi.length; i++) {
+        const broj = brojevi[i];
+        total += broj;
+      }
+      console.log(total);
+      // sad zelimo da dupliramo brojeve u nizu brojevi
+
+      const brojeviDuplirani = [];
+
+      for (let i = 0; i < brojevi.length; i++) {
+        const broj = brojevi[i];
+        brojeviDuplirani.push(broj * 2);
+      }
+      console.log(brojeviDuplirani);
+    </script>
+  </body>
+</html>

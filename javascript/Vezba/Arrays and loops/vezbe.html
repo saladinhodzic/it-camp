@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const nums = [10, 20, 30];
+      nums[2] = 99;
+      console.log(nums);
+
+      function getLastValue(array) {
+        lastValue = array.length - 1;
+
+        console.log(array[lastValue]);
+      }
+      getLastValue([1, 2, 3, 4]);
+
+      function arraySwap(array) {
+        const getLastIndex = array.length - 1;
+        const lastIndex = array[getLastIndex];
+        const firstIndex = array[0];
+
+        array[0] = lastIndex;
+        array[getLastIndex] = firstIndex;
+        console.log(array);
+      }
+
+      arraySwap([24, 5, 2, 1]);
+
+      //   for (let i = 0; i <= 10; i += 2) {
+      //     console.log(i);
+      //   }
+
+      //   for (let i = 5; i >= 0; i--) {
+      //     console.log(i);
+      //   }
+      //   let iter = 0;
+      //   while (iter <= 10) {
+      //     console.log(iter);
+      //     iter += 2;
+      //   }
+      //   iter = 5;
+      //   while (iter >= 0) {
+      //     console.log(iter);
+      //     iter--;
+      //   }
+
+      const newArray = [1, 2, 3];
+
+      for (let i = 0; i <= newArray.length - 1; i++) {
+        newArray[i] += 1;
+      }
+      console.log(newArray);
+
+      function addOne(array) {
+        for (let i = 0; i < array.length; i++) {
+          array[i]++;
+        }
+        console.log(array);
+      }
+      addOne([2, 3, 4]);
+
+      function addSum(array, number) {
+        for (let i = 0; i < array.length; i++) {
+          array[i] += number;
+        }
+        console.log(array);
+      }
+
+      addSum([1, 2, 3], 3);
+
+      const result = [];
+      function addArrays(array1, array2) {
+        for (let i = 0; i < array1.length; i++) {
+          result.push(array1[i] + array2[i]);
+        }
+        console.log(result);
+      }
+      addArrays([1, 2, 3], [1, 2, 3]);
+
+      let pozitivniBrojevi = 0;
+      function countPositive(nums) {
+        for (let i = 0; i < nums.length; i++) {
+          if (nums[i] > 0) {
+            pozitivniBrojevi++;
+          }
+        }
+        console.log(pozitivniBrojevi);
+      }
+      countPositive([1, -2, 3, -2, 3]);
+    </script>
+  </body>
+</html>

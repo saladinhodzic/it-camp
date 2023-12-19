@@ -91,6 +91,38 @@
         console.log(pozitivniBrojevi);
       }
       countPositive([1, -2, 3, -2, 3]);
+
+      function minMax(nums) {
+        const result = {
+          min: null,
+          max: null,
+        };
+        for (let i = 0; i < nums.length; i++) {
+          const value = nums[i];
+          if (result.min === null || result.min > value) {
+            result.min = value;
+          } else if (result.max === null || result.max < value) {
+            result.max = value;
+          }
+        }
+        console.log(result);
+      }
+      minMax([1, 2, 3, -4]);
+      minMax([]);
+
+      function countWords(words) {
+        const result = {};
+        for (let i = 0; i < words.length; i++) {
+          const word = words[i];
+          if (!result[word]) {
+            result[word] = 1;
+          } else if (result[word]) {
+            result[word]++;
+          }
+        }
+        console.log(result);
+      }
+      countWords(["apple", "apple", "pear"]);
     </script>
   </body>
 </html>

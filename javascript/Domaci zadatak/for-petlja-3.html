@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 2.
+      // Korisnik unosi broj iz intervala [12,16).
+      // Na osnovu unetog broja, iteracija se vrsi od njega do 1(ukljucujuci).
+      // Ispisati svaki broj iz iteracije, njegov kvadrat i vrednost broja umanjenu za 25.
+
+      const broj = +prompt("Unesite broj");
+
+      if (isNaN(broj)) {
+        console.log("Niste uneli broj");
+      } else if (broj < 12 || broj > 16) {
+        console.log("Niste uneli broj iz trazenog opsega");
+      } else {
+        for (let i = broj; i >= 1; i--) {
+          console.log(i);
+          console.log(i * i);
+          console.log(i - 25);
+        }
+      }
+    </script>
+  </body>
+</html>

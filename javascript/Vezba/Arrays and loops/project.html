@@ -8,6 +8,7 @@
   <body>
     <p>To Do list</p>
     <input class="polje" placeholder="To Do Name" />
+    <input class="datum" type="date" />
     <button
       class="add"
       onclick="
@@ -19,14 +20,25 @@
     <div class="js-to-do-list"></div>
 
     <script>
-      const firstArray = ["wash dishes", "clean shoes"];
+      const firstArray = [{ task: "wash dishes", datum: "12-20-2023" }];
       renderTasks();
       function renderTasks() {
         let tasks = "";
 
         for (let i = 0; i < firstArray.length; i++) {
-          let elementi = firstArray[i];
-          let html = `<p>${elementi}</p>`;
+          let elementiObjekta = firstArray[i];
+          // const task = elementiObjekta.task;
+          // const datum = elementiObjekta.datum;
+          const { task, datum } = elementiObjekta;
+          let html = `
+          <p>
+            ${task} ${datum}
+            <button onclick = "
+            firstArray.splice(${i},1)
+            renderTasks()
+            ">Delete</button>
+            </p>
+          `;
           tasks += html;
         }
 
@@ -36,8 +48,11 @@
       }
       function addToDo() {
         const addInputText = document.querySelector(".polje");
+        const addDateInput = document.querySelector(".datum");
+
+        const addDate = addDateInput.value;
         let inputValue = addInputText.value;
-        firstArray.push(inputValue);
+        firstArray.push({ task: inputValue, datum: addDate });
 
         console.log(firstArray);
         inputValue.value = "";

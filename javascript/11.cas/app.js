@@ -53,3 +53,12 @@ for (let i = 1; i <= 5; i++) {
   }
 }
 console.log(proizvod);
+
+// for (dem = 1; dem <= 10; dem++) {
+//  console.log(dem);
+// }
+demi = 0;
+for (mir = 10; mir <= 20; mir++) {
+  demi = demi + mir;
+}
+console.log(demi);

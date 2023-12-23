@@ -42,6 +42,7 @@ console.log(brojGodina);
 // 3. koriscenjem const keyword(rezervisane reci) - kada je vrednost stalna i ne moze da se menja, mora odmah da se inicijalizuje
 
 const ime = "Saladin";
+
 // console.log(`Moje ime je ${ime}. Imam ${27} godina.`);
 
 // 4. koriscenjem niceg.

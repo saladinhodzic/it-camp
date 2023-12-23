@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./todo-list.css" />
+  </head>
+  <body>
+    <input class="input-polje" placeholder="Add to list" />
+    <button
+      onclick="
+    addToDo()
+    "
+      class="add-button"
+    >
+      Add
+    </button>
+    <div class="js-list"></div>
+    <script>
+      const lista = [];
+      dodajTask();
+      function dodajTask() {
+        let tasks = "";
+        for (let i = 0; i < lista.length; i++) {
+          let elementi = lista[i];
+          let html = `<p> ${elementi}
+</p>
+            `;
+          tasks += html;
+        }
+        document.querySelector(".js-list").innerHTML = tasks;
+      }
+      function addToDo() {
+        const poljeZaPisanje = document.querySelector(".input-polje");
+        const poljeTekst = poljeZaPisanje.value;
+
+        lista.push(poljeTekst);
+        dodajTask();
+      }
+    </script>
+  </body>
+</html>

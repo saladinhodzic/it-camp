@@ -69,7 +69,7 @@ console.log(niz);
 
 //2.2. Object - predstavlja strukturu podataka za skladistenje vise vrednosti. Objekti se zapisuju u key:value parovima.
 
-obj = {
+const obj = {
   ime: "Demir",
   brojGodina: 18,
   punoletan: true,

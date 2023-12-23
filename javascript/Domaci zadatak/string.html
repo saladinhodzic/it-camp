@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Domaci zadatak.
+      // 1. Ispisati novu recenicu gde ce svaka rec zavrsavati velikim slovom.
+
+      // 2.	Prebrojati koliko se puta u unetom stringu pojavljuje slovo "M" (i veliko i malo).
+      // Npr. za string 'Mama ima momu', dobija se rezultat 5
+
+      const recenica1 = "svaka rec se zavrsava velikim slovom";
+      let recenica2 = "";
+      for (let i = 0; i < recenica1.length; i++) {
+        if (recenica1[i + 1] === " ") {
+          recenica2 += recenica1[i].toUpperCase();
+        } else if (recenica1[i] === recenica1[recenica1.length - 1]) {
+          recenica2 += recenica1[i].toUpperCase();
+        } else {
+          recenica2 += recenica1[i];
+        }
+      }
+      console.log(recenica2);
+
+      const string = prompt("Unesite neku recenicu");
+      let brojac = 0;
+      for (let i = 0; i <= string.length - 1; i++) {
+        if (string[i] === "m" || string[i] === "M") {
+          brojac++;
+        }
+      }
+      console.log(brojac);
+    </script>
+  </body>
+</html>

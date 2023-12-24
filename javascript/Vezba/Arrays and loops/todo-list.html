@@ -4,10 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poiret+One&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./todo-list.css" />
   </head>
   <body>
-    <input class="input-polje" placeholder="Add to list" />
+    <p class="title">To Do List</p>
+    <input
+      onkeydown="
+    onEnter()
+    "
+      class="input-polje"
+      placeholder="Add to list"
+    />
+    <input type="date" class="date" />
     <button
       onclick="
     addToDo()
@@ -24,18 +38,38 @@
         let tasks = "";
         for (let i = 0; i < lista.length; i++) {
           let elementi = lista[i];
-          let html = `<p> ${elementi}
-</p>
+          const { poljeTekst, datum } = elementi;
+          let html = `<div>${i + 1}. ${poljeTekst}   </div>
+          <div> ${datum}</div> 
+          <div> 
+            <button class="remove-button"
+           onclick="
+            
+          lista.splice(${i},1) 
+          dodajTask()
+          ">Remove</button>
+                   </div>  
             `;
           tasks += html;
         }
         document.querySelector(".js-list").innerHTML = tasks;
       }
+
+      function onEnter() {
+        if (event.key === "Enter") {
+          addToDo();
+        }
+      }
       function addToDo() {
         const poljeZaPisanje = document.querySelector(".input-polje");
         const poljeTekst = poljeZaPisanje.value;
 
-        lista.push(poljeTekst);
+        const poljeZaDatum = document.querySelector(".date");
+        const datum = poljeZaDatum.value;
+
+        lista.push({ poljeTekst, datum });
+        poljeZaPisanje.value = "";
+        poljeZaDatum.value = "";
         dodajTask();
       }
     </script>

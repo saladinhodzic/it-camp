@@ -14,22 +14,26 @@
   </head>
   <body>
     <p class="title">To Do List</p>
-    <input
-      onkeydown="
+
+    <div class="input-za-pisanje">
+      <input
+        onkeydown="
     onEnter()
     "
-      class="input-polje"
-      placeholder="Add to list"
-    />
-    <input type="date" class="date" />
-    <button
-      onclick="
+        class="input-polje"
+        placeholder="Add to list"
+      />
+      <input type="date" class="date" />
+      <button
+        onclick="
     addToDo()
     "
-      class="add-button"
-    >
-      Add
-    </button>
+        class="add-button"
+      >
+        Add
+      </button>
+    </div>
+
     <div class="js-list"></div>
     <script>
       const lista = [];
@@ -39,16 +43,18 @@
         for (let i = 0; i < lista.length; i++) {
           let elementi = lista[i];
           const { poljeTekst, datum } = elementi;
-          let html = `<div>${i + 1}. ${poljeTekst}   </div>
-          <div> ${datum}</div> 
-          <div> 
+          let html = `
+          <div>
+          ${i + 1}. ${poljeTekst} 
+          </div>
+          <div>
+          ${datum}
+          </div> 
             <button class="remove-button"
            onclick="
-            
           lista.splice(${i},1) 
           dodajTask()
           ">Remove</button>
-                   </div>  
             `;
           tasks += html;
         }
@@ -71,6 +77,9 @@
         poljeZaPisanje.value = "";
         poljeZaDatum.value = "";
         dodajTask();
+      }
+      function doneTask() {
+        const doneTask = document.querySelector(".js-list");
       }
     </script>
   </body>

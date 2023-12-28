@@ -1,6 +1,10 @@
 body {
   font-family: "Poppins";
 }
+.input-za-pisanje {
+  display: grid;
+  grid-template-columns: 200px 150px 150px;
+}
 .title {
   font-size: 2em;
   margin: 0 0 0.5em 0;
@@ -23,8 +27,8 @@ body {
 .js-list {
   margin-top: 1em;
   display: grid;
-
-  grid-template-columns: 200px 150px 100px;
+  grid-template-columns: 200px 150px 150px;
+  grid-row-gap: 1em;
 }
 
 .js-list div {
@@ -35,11 +39,10 @@ body {
   border: none;
   background-color: rgb(180, 2, 2);
   color: #fff;
-  font-size: 0.75em;
+  font-size: 1em;
   cursor: pointer;
-  padding: 8px 20px;
+  padding: 10px 20px;
   border-radius: 5px;
-  margin-left: 2em;
 }
 
 .date {

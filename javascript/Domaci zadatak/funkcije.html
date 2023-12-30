@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Napraviti arrow funkciju koja na osnovu unete vrednosti vraca jedno od cetiri stanja:
+      // Ako je unet pozitivan broj, ispisuje poruku "UNET JE POZITIVAN BROJ"
+      // Ako je unet negativan broj, ispisuje poruku "UNET JE NEGATIVAN BROJ"
+      // Ako je uneta nula, ispisuje poruku "UNETA JE NULA"
+      // Ako nije unet broj, ispisuje poruku "UNETA VREDNOST NIJE BROJ"
+
+      // Zadatak 2:
+      // Napiši funkciju koja prima broj i vraća true ako je broj paran, a false ako je neparan.
+
+      // Zadatak 3:
+      // Napiši funkciju koja prima dva broja i vraća veći od njih.
+
+      // Zadatak 4:
+      // Napiši funkciju koja prima broj i vraća sumu svih brojeva do tog broja (uključujući taj broj). Na primer, za broj 4, funkcija treba vratiti 1 + 2 + 3 + 4 = 10
+
+      //   1.
+      const broj = () => {
+        const unetiBroj = +prompt("Unesite broj");
+        if (isNaN(unetiBroj)) {
+          console.log("Uneta vrednost nije broj");
+        } else if (unetiBroj === 0) {
+          console.log("Uneta je nula");
+        } else if (unetiBroj < 0) {
+          console.log("Unet je negativan broj");
+        } else {
+          console.log("Unet je pozitivan broj");
+        }
+      };
+      broj();
+
+      //   2.
+      function primljeniBroj(broj) {
+        if (broj % 2 !== 0) {
+          return false;
+        } else {
+          return true;
+        }
+      }
+      console.log(primljeniBroj(2));
+      //   3.
+
+      function primljeniBrojevi(a, b) {
+        if (a > b) {
+          return a;
+        } else {
+          return b;
+        }
+      }
+      console.log(primljeniBrojevi(5, 3));
+
+      //   4.
+
+      function suma(a) {
+        let zbir = 0;
+        for (let i = 1; i <= a; i++) {
+          zbir += i;
+        }
+        return zbir;
+      }
+      console.log(suma(4));
+    </script>
+  </body>
+</html>

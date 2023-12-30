@@ -64,8 +64,3 @@ const nekiReturn = function (a, b) {
 };
 const finalniRezultat = nekiReturn(1, 2);
 console.log(finalniRezultat * 2);
-
-// const nekaFunkcija = function (a, b, c) {
-//   return c * (a + b);
-// };
-// console.log(nekaFunkcija(1, 2, finalniRezultat));

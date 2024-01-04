@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1. Primer ako korisnik unosi broj:(isti zadatak, ali posmatrati brojeve)
+
+      // 2. Korisnik unosi svoje ime. Proveriti da li je uneto ime truthy vrednost (nije prazan string, undefined ili null).
+      // Ako je uneto ime truthy, ispisati korisnikovo ime, inače ispisati da korisnik nema definisano ime.
+
+      // 3. Korisnik unosi broj. Proveriti da li je uneti broj falsy vrednost (0 ili NaN). Ako je uneti broj falsy, ispisati poruku da korisnik nema definisan broj, inače ispisati uneti broj.
+
+      // 4. Definisati promenljivu koja nije inicijalizovana. Proveriti da li je vrednost promenljive falsy (undefined).
+      // Ako je vrednost falsy, ispisati poruku da korisnik nema definisanu vrednost, inače ispisati vrednost promenljive.
+
+      // 1.
+      function broj() {
+        const broj = +prompt("Unesite broj");
+
+        if (broj) {
+          console.log("Uneli ste TRUTHY vrednost");
+        } else {
+          console.log("Uneli ste FALSY vrednost");
+        }
+      }
+      broj();
+      //   2.
+
+      const ime = () => {
+        const ime = prompt("Unesite vase ime");
+
+        if (ime) {
+          console.log(ime);
+        } else {
+          console.log("Korisnik nema definisano ime");
+        }
+      };
+      ime();
+
+      //   3.
+
+      const ispisatiBroj = () => {
+        const broj = +prompt("Unesite broj");
+
+        if (!broj) {
+          console.log("Niste uneli broj");
+        } else {
+          console.log(broj);
+        }
+      };
+      ispisatiBroj();
+
+      //   4.
+
+      let nesto;
+      if (!nesto) {
+        console.log("Niste uneli vrednost promenljive");
+      } else {
+        console.log(nesto);
+      }
+    </script>
+  </body>
+</html>

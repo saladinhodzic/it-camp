@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Ekstraktovanje teksta:
+
+// Iz stringa recenica4 izdvojite reč "ako" i ispišite je.
+// Iz stringa recenica5 izdvojite prvu rečenicu i ispišite je.
+
+// Formatiranje teksta:
+
+// Napravite novi string koji će sadržavati vrednost iz recenica6 sa velikim slovima.
+// Zamolite korisnika da unese svoje ime i napravite personalizovanu poruku koristeći concat.
+
+// Manipulacija dužinom teksta:
+
+// Iz stringa recenica4 izdvojite poslednjih 5 karaktera i ispišite ih.
+// Izračunajte dužinu stringa koji sadrži spajanje stringova ime i prezime sa razmakom.
+
+// Uklanjanje razmaka:
+
+// Iz stringa email uklonite sve razmake sa obe strane koristeći trim i ispišite rezultat.
+
+// 1.
+const recenica = "sta ako zelimo da se \\ nadje u tekstu"
+console.log(recenica.slice(4,7))
+
+// 2.1
+const recenica2 = "Danas je bio tmuran dan"
+const recenica3 = recenica2.toUpperCase()
+// 2.2
+const unos = prompt('Unesite vase ime')
+const poruka = "Vase ime je:"
+console.log(poruka.concat(" ",unos))
+
+// 3.1
+console.log(recenica.slice(-6))
+// 3.2
+const ime = 'Saladin'
+const prezime = 'Hodzic'
+console.log(ime.concat(" ",prezime).length)
+
+// 4.
+const email = "   hsaladin06@gmail.com   "
+console.log(email.trim())
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Domaci zadaci:
+       // 1.
+       // Napraviti funkciju koja kod stringa koji predstavlja argument funkcije ispituje sledece:
+       // Ako dati string ima vecu duzinu od 9:
+       // pravi novi string gde menjamo sva mala slova "a" sa "B" i funkcija ce vratiti novi string koji je sastavljen od "Ovo je novodobijena recenica, " + novaRecenica
+       // Ako string ima duzinu <= 9:
+       // Funkcija treba vratiti poruku:
+       // Recenica je nedovoljne duzine za dalje ispitivanje.
+       
+       // 2. Napraviti funkciju koja trazi od korisnika da unese neku recenicu, zatim funkcija vraca, datu recenicu u vise oblika (spojenu u jedan string).
+       // 1. recenicu ispisanu velikim slovima;
+       // 2. recenicu ispisanu malim slovima;
+       // 3. pola recenice ispisano velikim slovima, pola recenice ispisano malim slovima;
+       // 4. Ako se u recenici nadje rec 'skola' neka bude zamenjena recju 'fakultet'.
+       
+       const funkcija = (string)=>{
+           if(string.length > 9){
+             return `Ovo je novodobijena recenica: ${string.replace(/a/g,"B")}`
+           }else{
+              return "Recenica je nedovoljne duzine za dalje ispitivanje"
+           }
+       }
+       
+       console.log(funkcija('Danas je lep dan'))
+       console.log(funkcija('Danas'))
+       
+       
+       function recenica(){
+           const string = prompt('Unesite recenicu') 
+           const polaDuzine= string.length/2
+            
+           return `${string.toUpperCase()}
+${string.toLowerCase()}
+${string.substr(0,polaDuzine).toUpperCase() + string.substr(polaDuzine) }
+${string.replace("skola", "fakultet")}`
+        }
+        console.log(recenica())
+
+    
+       </script>
+</body>
+</html>

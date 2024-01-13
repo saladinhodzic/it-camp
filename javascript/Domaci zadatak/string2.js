@@ -40,14 +40,15 @@ console.log(ispitati("DANAS JE LEP dan"))
 
 
 function palindrom(string){
-    const polaDuzine = string.length/2
-    let reversed = ''
-    for(i=string.length;i>polaDuzine;i--){
-reversed+=i
+    let reversedRecenica = ''
+    for(let i = string.length-1;i>=0;i--){
+      reversedRecenica+=string[i]
     }
-if(string.substr(0,polaDuzine)===reversed){
-    return "string je palindrom"
+    if(reversedRecenica === string){
+        return "Uneti string je palindrom"
+    }else{
+        return "Uneti string nije palindrom"
+    }
 }
-}
-console.log(palindrom("racecar"))
-
+console.log(palindrom("anavolimilovana"))
+console.log(palindrom("samsf"))

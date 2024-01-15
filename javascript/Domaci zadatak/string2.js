@@ -8,7 +8,9 @@
 function prebrojati(string){
     let brojac = 0
     for(i=0;i<string.length;i++){
-        if(string[i] !== string[i].toUpperCase() && string[i] !== ' '){
+        // if(string[i] !== string[i].toUpperCase() && string[i] !== ' ')
+        if(string[i]>="a"&& string[i]<="z")
+        {
             brojac++
         }
     }

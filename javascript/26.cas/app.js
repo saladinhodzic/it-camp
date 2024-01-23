@@ -24,16 +24,16 @@ let w = 0.3
 console.log(z)
 console.log(z===w)
 
-function nesto(string){
+function nesto(email){
     const index_= email.indexOf('_')
     const indexDot= email.indexOf('.')
     const hashtag= email.indexOf('@')
     const cutStart = index_ === -1 ? indexDot : index_
-    let cut = email.slice(cutStart,hashtag)
+    const cut = email.slice(cutStart,hashtag)
 
 
     
-return string.replace()
+return email.replace(cut,'...')
 }
 console.log(nesto("saladin_hodzic@gmail.com"))
 

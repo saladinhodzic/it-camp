@@ -31,8 +31,6 @@ function nesto(email){
     const cutStart = index_ === -1 ? indexDot : index_
     const cut = email.slice(cutStart,hashtag)
 
-
-    
 return email.replace(cut,'...')
 }
 console.log(nesto("saladin_hodzic@gmail.com"))

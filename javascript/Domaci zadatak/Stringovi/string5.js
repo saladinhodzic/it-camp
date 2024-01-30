@@ -6,41 +6,77 @@
 // Ako se pojavljuje vise puta dati string, vratiti poziciju prvog i poslednjeg pojavljivanja, ako se pojavljuje jednom, vratiti poziciju pojavljivanja, dok ako se ne pojavljuje dati string vratiti poruku:
 // "Nismo pronasli dati string."
 
-function ispitivanje(string){
-const recenica = 'ko osvaja'
-recenicaGlobal = /ko osvaja/g
+function ispitivanje(string) {
+  const recenica = "ko osvaja";
+  recenicaGlobal = /ko osvaja/g;
 
-const pojavljivanja = string.match(recenicaGlobal)
+  const pojavljivanja = string.match(recenicaGlobal);
 
-    if(!string.includes(recenica)){
-        return "Nismo pronasli dati string"
-    }else if(pojavljivanja.length > 1){
-        return string.lastIndexOf(recenica)
-    }else {
-        return string.indexOf(recenica)
-
-    }
+  if (!string.includes(recenica)) {
+    return "Nismo pronasli dati string";
+  } else if (pojavljivanja.length > 1) {
+    return string.lastIndexOf(recenica);
+  } else {
+    return string.indexOf(recenica);
+  }
 }
-console.log(ispitivanje("ligu sampiona"))
-console.log(ispitivanje("ligu ko osvaja"))
-console.log(ispitivanje("ko osvaja ligu ko osvaja"))
+console.log(ispitivanje("ligu sampiona"));
+console.log(ispitivanje("ligu ko osvaja"));
+console.log(ispitivanje("ko osvaja ligu ko osvaja"));
 
-function index(recenica){
-    const dveReci = 'ko osvaja'
+function index(recenica) {
+  const dveReci = "ko osvaja";
 
-    const brojPonavljanja = recenica.includes(dveReci)
-    ?recenica.match(/ko osvaja/g).length
-    :0
-    if(!recenica.includes(dveReci)){
-        return "Nismo pronasli dati string"
-    }else if (brojPonavljanja >1){
-        return `Prvo pojavljivanje ${recenica.indexOf(dveReci)}
-        Zadnje pojavljivanje ${recenica.lastIndexOf(dveReci)}`
-    }else{
-        return recenica.indexOf(dveReci)
-    }
+  const brojPonavljanja = recenica.includes(dveReci)
+    ? recenica.match(/ko osvaja/g).length
+    : 0;
+  if (!recenica.includes(dveReci)) {
+    return "Nismo pronasli dati string";
+  } else if (brojPonavljanja > 1) {
+    return `Prvo pojavljivanje ${recenica.indexOf(dveReci)}
+        Zadnje pojavljivanje ${recenica.lastIndexOf(dveReci)}`;
+  } else {
+    return recenica.indexOf(dveReci);
+  }
 }
 
-console.log(index("ligu sampiona"))
-console.log(index("ligu ko osvaja"))
-console.log(index("ko osvaja ligu ko osvaja"))
+console.log(index("ligu sampiona"));
+console.log(index("ligu ko osvaja"));
+console.log(index("ko osvaja ligu ko osvaja"));
+
+// Write a JavaScript function to convert a string into abbreviated form.
+
+function skraceno(string) {
+  let skracenString = "";
+  for (i = 0; i < string.length; i++) {
+    if (string[i - 1] === " ") {
+      skracenString += string[i] + ".";
+      break;
+    } else {
+      skracenString += string[i];
+    }
+  }
+  return skracenString;
+}
+console.log(skraceno("Saladin Hodzic"));
+console.log(skraceno("Ajsa Maljevac"));
+
+// Write a JavaScript function to parameterize a string.
+
+function izmenjena(string) {
+  let recenica = "";
+  for (i = 0; i < string.length; i++) {
+    if (string[i] === " ") {
+      recenica += "-";
+    } else {
+      recenica += string[i].toLowerCase();
+    }
+  }
+  return recenica;
+}
+
+console.log(izmenjena("Ajsa voli prsutu"));
+
+const repeat = (string, n) => {};
+
+console.log(repeat("Ajsica mala", 3));

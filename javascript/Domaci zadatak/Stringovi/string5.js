@@ -80,3 +80,31 @@ console.log(izmenjena("Ajsa voli prsutu"));
 const repeat = (string, n) => {};
 
 console.log(repeat("Ajsica mala", 3));
+
+// Write a JavaScript function to uncommelize a string
+
+function nesto(string, znak) {
+  let novaRecenica = "";
+  for (i = 0; i < string.length; i++) {
+    if (string[i] === " ") {
+      novaRecenica += znak;
+    } else {
+      novaRecenica += string[i];
+    }
+  }
+  return novaRecenica;
+}
+console.log(nesto("Ajsa jede prsutu", "-"));
+console.log(nesto("Ajsa jede prsutu", "_"));
+
+// Write a JavaScript function to truncate a string to a certain number of words.
+
+function truncate(string, n) {
+  let recenica = "";
+  for (i = 0; i < string.length; i++) {
+    if (string[i] === " ") {
+    }
+  }
+}
+
+console.log(truncate("Ajsa voli prsutu i voli da gleda koreanske filmove"));

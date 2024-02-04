@@ -101,10 +101,16 @@ console.log(nesto("Ajsa jede prsutu", "_"));
 
 function truncate(string, n) {
   let recenica = "";
-  for (i = 0; i < string.length; i++) {
+  let brojac = 0;
+  for (i = 0; brojac < n; i++) {
     if (string[i] === " ") {
+      brojac++;
+      recenica += string[i];
+    } else {
+      recenica += string[i];
     }
   }
+  return recenica;
 }
 
-console.log(truncate("Ajsa voli prsutu i voli da gleda koreanske filmove"));
+console.log(truncate("Ajsa voli prsutu i voli da gleda koreanske filmove", 4));

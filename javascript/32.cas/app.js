@@ -51,9 +51,9 @@ const malaSlova = (tekst) => tekst.toLowerCase();
 const replaceAllSpaces = (tekst) => tekst.replaceAll(" ", "-");
 const addYtoEveryWord = (tekst) => `${tekst.replaceAll(" ", "y ")}y`;
 const addYtoEveryWord2 = (tekst) => {
- let result= tekst.split(" ");
- const newResult = []
- for(i=0;i<tekst.length;i++)
+  let result = tekst.split(" ");
+  const newResult = [];
+  for (i = 0; i < tekst.length; i++) {}
 };
 // const svakaRecVelikoSlovo = (tekst) => {
 //   for (i = 0; i < tekst.length; i++) {

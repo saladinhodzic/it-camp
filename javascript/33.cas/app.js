@@ -121,7 +121,7 @@ const niz8 = mockData.filter((value) => {
     default:
       return false;
   }
-  // switch(['a','e','i','o','u']).includes(value.name[0].toLowerCase()){
+  // switch(['a','e','i','o','u'].includes(value.name[0].toLowerCase())){
   //   case true:
   //     return true
   //     default:

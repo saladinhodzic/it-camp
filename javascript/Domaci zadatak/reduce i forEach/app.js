@@ -86,3 +86,64 @@ function arraySwap(niz) {
   return niz;
 }
 console.log(arraySwap(nums));
+
+// napraviti petlju koja uzima neki niz brojeva i vraca novi niz sa brojevima povecanim za 1
+
+const plusJedan = [];
+for (i = 0; i < nums.length; i++) {
+  plusJedan.push(nums[i] + 1);
+}
+console.log(plusJedan);
+
+// napraviti funkciju koja uzima neki niz brojeva i vraca novi niz sa brojevima povecanim za 1
+
+function addOne(niz) {
+  for (i = 0; i < niz.length; i++) {
+    niz[i]++;
+  }
+  return niz;
+}
+console.log(addOne(plusJedan));
+
+// napraviti funkciju koju kao parametre uzima neki niz i n broj i vraca niz sa brojevima povecanim za n broj
+
+function addNesto(niz, broj) {
+  const result = niz.map((value) => {
+    return value + broj;
+  });
+  return result;
+}
+console.log(addNesto(nums, 5));
+
+// napraviti funkciju koja uzima dva niza kao parametre i vraca njihov zbir
+
+const nums2 = [1, 2, 3];
+
+function addArrays(niz1, niz2) {
+  let result = [];
+  for (i = 0; i < niz1.length; i++) {
+    result.push(niz1[i] + niz2[i]);
+  }
+  return result;
+}
+console.log(addArrays(nums, nums2));
+
+// napraviti funkciju koja broji pozitivne brojeve u nekom nizu
+
+// function countPositive(niz) {
+//   let brojac = 0;
+//   for (i = 0; i < niz.length; i++) {
+//     if (niz[i] > 0) {
+//       brojac++;
+//     }
+//   }
+//   return brojac;
+// }
+function countPositive(niz) {
+  const result = niz.filter((value) => {
+    if (value > 0) {
+      return result;
+    }
+  });
+}
+console.log(countPositive([2, -2, 5, 16, -6]));

@@ -50,3 +50,39 @@ const unikatneVrednosti = vrednosti.reduce((result, value) => {
   return result;
 }, []).length;
 console.log(unikatneVrednosti);
+
+const nekiNiz = [1, 2, 3, 4, 5, 6];
+const drugiNiz = nekiNiz.reduce((result, value) => {
+  if (value % 2 === 0) {
+    result.push(value);
+  }
+  return result;
+}, []);
+console.log(drugiNiz);
+
+const naKvadrat = nekiNiz.reduce((result, value) => {
+  result.push(value ** 2);
+  return result;
+}, []);
+console.log(naKvadrat);
+
+// napraviti funkciju koja vraca zadnju vrednost iz niza
+
+const nums = [10, 20, 30];
+
+function getLastValue(niz) {
+  return niz[niz.length - 1];
+}
+console.log(getLastValue(nums));
+
+// napraviti funkciju koja vraca niz gde su zadnja i prva vrednost mesta zamenjena
+function arraySwap(niz) {
+  const getLastValue = niz.length - 1;
+  const firstIndex = niz[0];
+  const lastIndex = niz[getLastValue];
+
+  niz[0] = lastIndex;
+  niz[getLastValue] = firstIndex;
+  return niz;
+}
+console.log(arraySwap(nums));

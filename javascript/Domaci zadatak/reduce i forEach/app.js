@@ -142,8 +142,9 @@ console.log(addArrays(nums, nums2));
 function countPositive(niz) {
   const result = niz.filter((value) => {
     if (value > 0) {
-      return result;
+      return true;
     }
   });
+  return result.length;
 }
 console.log(countPositive([2, -2, 5, 16, -6]));

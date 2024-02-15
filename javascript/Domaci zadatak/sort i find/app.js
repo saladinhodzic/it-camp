@@ -20,9 +20,12 @@ const words = ["apple", "pear", "apple", "strawberry", "grape"];
 function countWords(niz) {
   const objekat = {};
   for (i = 0; i < niz.length; i++) {
-    if (niz[i] === "apple") {
-      objekat[apple]++;
+    if (!objekat[niz[i]]) {
+      objekat[niz[i]] = 1;
+    } else {
+      objekat[niz[i]]++;
     }
   }
+  return objekat;
 }
-console.log(object);
+console.log(countWords(words));

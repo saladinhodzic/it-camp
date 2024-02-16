@@ -29,3 +29,22 @@ function countWords(niz) {
   return objekat;
 }
 console.log(countWords(words));
+
+// sortiraj niz brojeva
+
+const sortiranNiz = numbers.sort((a, b) => {
+  return a - b;
+});
+console.log(sortiranNiz);
+
+// sortiraj niz objekata po godinama uzlaznim
+const people = [
+  { name: "Alice", age: 30 },
+  { name: "Bob", age: 25 },
+  { name: "Charlie", age: 35 },
+];
+
+const sortiraniLjudi = people.sort((a, b) => {
+  return a.age - b.age;
+});
+console.log(sortiraniLjudi);

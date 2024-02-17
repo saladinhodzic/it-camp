@@ -48,3 +48,37 @@ const sortiraniLjudi = people.sort((a, b) => {
   return a.age - b.age;
 });
 console.log(sortiraniLjudi);
+
+// sortiraj miksiran niz
+
+const mixedData = [10, "apple", 5, "orange", "kiwi", 3, "banana"];
+
+const mixString = mixedData
+  .filter((value) => {
+    if (typeof value === "string") {
+      return true;
+    }
+    return false;
+  })
+  .sort();
+
+const mixNumbers = mixedData
+  .filter((value) => {
+    if (typeof value === "number") {
+      return true;
+    }
+    return false;
+  })
+  .sort((a, b) => a - b);
+
+const mixSort = mixNumbers.concat(mixString);
+console.log(mixSort);
+
+// sortiranje duplikata
+
+const numbersWithDuplicates = [8, 2, 5, 2, 9, 8, 3, 7, 1, 5];
+
+const sortDuplicates = numbersWithDuplicates.sort((a, b) => {
+  return a - b;
+});
+console.log(sortDuplicates);

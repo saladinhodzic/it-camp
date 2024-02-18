@@ -82,3 +82,49 @@ const sortDuplicates = numbersWithDuplicates.sort((a, b) => {
   return a - b;
 });
 console.log(sortDuplicates);
+
+// napraviti funkciju koja uzima niz brojeva zatim filtrira neparne brojeve onda daje njihov kvadrat i zatim ih sortira uzlazno
+
+const nums = [1, 13, 15, 12, 16, 14, 3, 4, 8, 32];
+
+function fullSortiranje(niz) {
+  const numsSortiran = niz
+    .filter((value) => {
+      if (value % 2 === 0) {
+        return true;
+      }
+      return false;
+    })
+    .map((value) => {
+      return value ** 2;
+    })
+    .sort((a, b) => {
+      return a - b;
+    });
+  return numsSortiran;
+}
+console.log(fullSortiranje(nums));
+
+// uraditi koristeci reduce naci brojeve koji su deljivi sa 2 i 4 i vratiti njihov zbir
+
+function reduceSortiranje(niz) {
+  const noviNiz = niz.reduce((result, value) => {
+    if (value % 2 === 0 && value % 4 == 0) {
+      result += value;
+    }
+    return result;
+  });
+  return noviNiz;
+}
+
+console.log(reduceSortiranje(nums));
+
+//funkcija koja stringove razmake zameniti _
+
+const string = "Razmake u datom stringu zameniti.";
+
+function stringSpace(string) {
+  const niz = string.split(" ");
+  return niz.join("_");
+}
+console.log(stringSpace(string));

@@ -49,3 +49,63 @@ const prvaZivotinja = new Mammal("Macka");
 console.log(prvaZivotinja.name);
 prvaZivotinja.walk();
 prvaZivotinja.makeSound();
+
+// Exercise 3: Calculator Class
+// Create a Calculator class with basic arithmetic operations (addition, subtraction, multiplication, division) as methods.
+
+class Calculator {
+  addition(a, b) {
+    return a + b;
+  }
+
+  subtraction(a, b) {
+    return a - b;
+  }
+  multiplication(a, b) {
+    return a * b;
+  }
+  division(a, b) {
+    return a / b;
+  }
+}
+
+const broj = new Calculator();
+
+console.log(broj.addition(5, 4));
+console.log(broj.subtraction(5, 4));
+console.log(broj.multiplication(5, 4));
+
+// Exercise 4: Rectangle and Square Classes
+// Create a Rectangle class with properties width and height and a method calculateArea that calculates the area of the rectangle. Then, create a Square class that extends Rectangle and overrides the calculateArea method to suit a square
+
+class Rectangle {
+  constructor(width, height) {
+    this.width = width;
+    this.height = height;
+  }
+  calculateArea() {
+    return this.width * this.height;
+  }
+}
+
+const pravougaonik = new Rectangle(5, 6);
+
+console.log(pravougaonik.calculateArea());
+
+// Exercise 5: Person Class
+// Create a Person class with properties name and age. Implement a method sayHello that prints a greeting including the person's name.
+
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  sayHello() {
+    console.log(`${this.name} said hello`);
+  }
+}
+
+const prvaOsoba = new Person("Ajsa", 13);
+
+prvaOsoba.sayHello();

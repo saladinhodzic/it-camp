@@ -109,9 +109,56 @@ function fiscalCode(person) {
       case "u":
         continue;
       default:
-        code += surname[i];
+        code += code.length < 6 ? surname[i] : "";
     }
   }
   return code.toUpperCase();
 }
 console.log(fiscalCode(person1));
+
+// Matchstick Houses
+
+function matchstick(step) {
+  let brojac = step - 1;
+  let matches = step * 6;
+  if (step === 0) {
+    return `There are no matches`;
+  } else if (step === 1) {
+    return `There is: ${matches} matches`;
+  } else {
+    return `There is: ${matches - brojac} matches`;
+  }
+}
+console.log(matchstick(1));
+console.log(matchstick(4));
+console.log(matchstick(87));
+
+// Which Function Returns the Larger Number?
+const prviBroj = (a) => {
+  return a;
+};
+const drugiBroj = (b) => {
+  return b;
+};
+function largerNumber(fun1, fun2) {
+  if (fun1 === fun2) {
+    return "neither";
+  } else if (fun1 > fun2) {
+    return fun1;
+  } else {
+    return fun2;
+  }
+}
+console.log(largerNumber(prviBroj(3), drugiBroj(5)));
+
+// Write a function that takes a two-digit number and determines if it's the largest of two possible digit swaps.
+
+function largestSwap(broj) {
+  let reverseBroj = Number(broj.toString().split("").reverse().join(""));
+  if (reverseBroj > broj) {
+    return reverseBroj;
+  } else {
+    return broj;
+  }
+}
+console.log(largestSwap(23));

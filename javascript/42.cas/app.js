@@ -102,16 +102,29 @@ tekstInput.addEventListener("input", (e) => {
 
 // napraviti skriptu koja korisnika sa prompt funkcijom da unese svoje godine i onda odgovara na ekranu u nekom p elementu sa tim da li je on u penziji ili tinejdzer ili obicni covek
 
-const user = prompt("Vase godine:");
-const godine = document.getElementById("godine");
-let result;
-if (user < 18) {
-  result = "tinejdzer";
-} else if (user > 18 || user < 65) {
-  result = "normalan insan";
-} else {
-  result = "penzioner";
-}
-godine.textContent = result;
+// const user = prompt("Vase godine:");
+// const godine = document.getElementById("godine");
+// let result;
+// if (user < 18) {
+//   result = "tinejdzer";
+// } else if (user > 18 || user < 65) {
+//   result = "normalan insan";
+// } else {
+//   result = "penzioner";
+// }
+// godine.textContent = result;
 
 // ovaj kod u funkciju onclick
+
+const pokreni = document.getElementById("pokreni");
+pokreni.addEventListener("click", (e) => {
+  const paragraf = document.getElementById("godine");
+  const userInput = prompt("Unesite vase godine:");
+  if (userInput < 18) {
+    paragraf.textContent = "Tinejdzer";
+  } else if (userInput > 65) {
+    paragraf.textContent = "Starac";
+  } else {
+    paragraf.textContent = "Osoba";
+  }
+});

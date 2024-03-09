@@ -73,11 +73,20 @@ playGame('scissors');
       //     ties: 0,
       //   };
       // }
+
+      let isPlaying = false;
+      let intervalId;
       function autoPlay() {
-        setInterval(() => {
-          const playerMove = pickComputerMove();
-          playGame(playerMove);
-        }, 3000);
+        if (!isPlaying) {
+          intervalId = setInterval(() => {
+            const playerMove = pickComputerMove();
+            playGame(playerMove);
+            isPlaying = true;
+          }, 3000);
+        } else {
+          isPlaying = false;
+          clearInterval(intervalId);
+        }
       }
       function playGame(myMove) {
         const computerMove = pickComputerMove();

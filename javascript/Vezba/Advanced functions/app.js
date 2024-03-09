@@ -32,3 +32,10 @@ setTimeout(function () {
 // setInterval(function () {
 //   console.log("timeout");
 // }, 1000);
+
+["watch tv", "wash dishes", "draw something"].forEach(function (value) {
+  if (value === "wash dishes") {
+    return;
+  }
+  console.log(value);
+});

@@ -10,12 +10,12 @@
     <button
       onclick="
 
-playGame('rock');
 
 
   
     
     "
+      class="rock"
     >
       Rock
     </button>
@@ -65,6 +65,10 @@ playGame('scissors');
       };
 
       showScore();
+
+      document.querySelector(".rock").addEventListener("click", () => {
+        playGame("rock");
+      });
 
       // if (!score) {
       //   score = {

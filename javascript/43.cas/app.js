@@ -86,3 +86,12 @@ searchButton.addEventListener("click", () => {
 });
 
 // napravite da se search pokrece na klik enter dugmeta
+
+const input = document.getElementById("search");
+input.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    allQuotes().then((rezultati) => {
+      searchFn(rezultati);
+    });
+  }
+});

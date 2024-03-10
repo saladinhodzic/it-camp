@@ -33,9 +33,35 @@ setTimeout(function () {
 //   console.log("timeout");
 // }, 1000);
 
-["watch tv", "wash dishes", "draw something"].forEach(function (value) {
+["watch tv", "wash dishes", "draw something"].forEach((value) => {
   if (value === "wash dishes") {
     return;
   }
   console.log(value);
 });
+
+const arrowFunction = (parametar) => parametar + 1;
+
+const nesto = () => {
+  console.log("hello");
+};
+const dugme = document.querySelector(".dugme");
+dugme.addEventListener("click", nesto);
+
+dugme.removeEventListener("click", nesto);
+dugme.addEventListener("click", () => {
+  console.log("hello2");
+});
+
+console.log(
+  [5, -3, 2].filter((value, index) => {
+    return value >= 0;
+  })
+);
+
+console.log(
+  [1, 2, 6].map((value, index) => {
+    return value * 2;
+  })
+);
+console.log([1, 2, 6].map((value) => value * 2));

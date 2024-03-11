@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poiret+One&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <title>Rock paper scissors</title>
+    <script src="./rock-paper-scissors.js" defer></script>
+
+    <link rel="stylesheet" href="./rock-paper-scissors.css" />
+  </head>
+  <body>
+    <p class="title">Rock Paper Scissors</p>
+    <button
+      class="move-button"
+      onclick="
+playGame('rock');
+    "
+    >
+      <img src="./images/rock-emoji.png" alt="" />
+    </button>
+    <button
+      class="move-button"
+      onclick="
+     playGame('paper');
+    "
+    >
+      <img src="./images/paper-emoji.png" alt="" />
+    </button>
+    <button
+      class="move-button"
+      onclick="
+playGame('scissors');
+    "
+    >
+      <img src="./images/scissors-emoji.png" alt="" />
+    </button>
+    <p class="js-result result"></p>
+    <p class="js-moves moves"></p>
+    <p class="js-score"></p>
+    <button class="reset">Reset Score</button>
+    <button class="auto-play">Auto Play</button>
+    <div id="question">
+      <!-- <p>Do you want to reset score?</p>
+      <button class="dugme">Yes</button>
+      <button class="dugme">No</button> -->
+    </div>
+  </body>
+</html>

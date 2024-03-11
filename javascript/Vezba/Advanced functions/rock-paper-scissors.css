@@ -1,0 +1,39 @@
+body {
+  background-color: rgb(25, 25, 25);
+  color: #fff;
+  font-family: "Poppins";
+}
+.title {
+  font-size: 2em;
+  font-weight: bold;
+}
+img {
+  height: 50px;
+}
+.move-button {
+  background-color: transparent;
+  border: 3px solid #fff;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.result {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: 50px;
+}
+.moves {
+  margin-bottom: 4em;
+}
+.reset,
+.auto-play,
+.dugme1,
+.dugme2 {
+  background-color: #fff;
+  border: none;
+  font-size: 1em;
+  padding: 8px 20px;
+  cursor: pointer;
+}

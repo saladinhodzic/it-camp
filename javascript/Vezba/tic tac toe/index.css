@@ -2,7 +2,26 @@
   margin: 0;
   box-sizing: border-box;
 }
+.resultJs {
+  display: none;
+}
+.result {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
+.restart {
+  background-color: #fff;
+  border: none;
+  padding: 1em 2em;
+  font-size: 2em;
+  cursor: pointer;
+}
 .wrapper {
   width: 100%;
   height: 100vh;
@@ -36,6 +55,22 @@
 }
 .cell.x::after {
   transform: rotate(-45deg);
+}
+
+.cell.circle::before,
+.cell.circle::after {
+  content: "";
+  height: 125px;
+  width: 125px;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.cell.circle::after {
+  background-color: #fff;
+  width: 90px;
+  height: 90px;
 }
 
 .red {

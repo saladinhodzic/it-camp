@@ -65,3 +65,88 @@ const checkTownsville = mockData.filter((value) => {
 });
 
 console.log(checkTownsville);
+
+const pushTownsville = [];
+
+// mockData.forEach((value) => {
+//   if (value["address"].includes("Townsville")) {
+//     pushTownsville.push(value);
+//   } else {
+//     return;
+//   }
+// });
+
+// console.log(pushTownsville);
+
+// const nesto = mockData.reduce((accumulator, value) => {
+//   if (value["address"].includes("Townsville")) {
+//     accumulator.push(value);
+//   }
+//   return accumulator;
+// }, []);
+// console.log(nesto);
+
+// const nekiNiz = [1, 2, 3, 4, 5];
+
+// const provera = nekiNiz.reduce((acc, value) => {
+//   if (value === 2) {
+//     acc.push(value);
+//   }
+//   return acc;
+// }, []);
+
+// console.log(provera);
+
+// Fetching
+
+const url = "https://api.quotable.io/quotes";
+// fetch(url)
+//   .then((s) => s.json())
+//   .then((data) => console.log(data));
+
+const quotes = async () => {
+  try {
+    const get = await fetch(url);
+    const data = await get.json();
+    // console.log(data["results"]);
+    console.log(najduziCitat(data["results"]));
+    return data["results"];
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+quotes();
+// netacno
+
+// const najduziCitat = quotes()
+//   .then((data) => {
+//     data.forEach((value) => {
+//       const quote = value["content"];
+//       let najduziCitat;
+//       if (!najduziCitat) {
+//         najduziCitat = quote;
+//       } else if (najduziCitat.length < quote.length) {
+//         najduziCitat = quote;
+//       }
+//       return najduziCitat;
+//     });
+//   })
+//   .then((result) => {
+//     return result;
+//   });
+
+// console.log(najduziCitat);
+
+function najduziCitat(data) {
+  let najduziCitat;
+  data.forEach((value) => {
+    const quote = value["content"];
+    if (!najduziCitat) {
+      najduziCitat = quote;
+    } else if (najduziCitat.length < quote.length) {
+      najduziCitat = quote;
+    }
+  });
+  return najduziCitat;
+}

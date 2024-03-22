@@ -109,14 +109,19 @@ const quotes = async () => {
     const get = await fetch(url);
     const data = await get.json();
     // console.log(data["results"]);
-    console.log(najduziCitat(data["results"]));
-    return data["results"];
+    // console.log(najduziCitat(data["results"]));
+    return najduziCitat(data["results"]);
   } catch (error) {
     console.log(error);
   }
 };
+quotes().then((data) => console.log(data));
+// console.log(quotes());
+// quotes().then((data) => console.log(data));
 
-quotes();
+// console.log(quotes().then((data) => data));
+// console.log(podaci);
+// najduziCitat(podaci);
 // netacno
 
 // const najduziCitat = quotes()

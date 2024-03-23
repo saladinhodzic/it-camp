@@ -4,8 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      #content {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
+      }
+
+      .card {
+        width: 250px;
+        height: 150px;
+        border: 2px solid black;
+        border-radius: 5px;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 8px 12px;
+      }
+    </style>
   </head>
   <body>
-    <script src="./app.js"></script>
+    <input type="text" id="input" />
+    <button id="search">Search</button>
+    <div id="content">
+      <div class="card"></div>
+    </div>
+    <script src="./app2.js"></script>
   </body>
 </html>

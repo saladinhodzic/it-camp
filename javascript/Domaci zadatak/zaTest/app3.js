@@ -143,7 +143,9 @@ const contentDiv = document.querySelector(".content");
 
 const quotes1 = async () => {
   try {
-    const getQuotes = await fetch("https://api.quotable.io/quotes?}");
+    const getQuotes = await fetch(
+      `https://api.quotable.io/search/quotes?query=${inputField.value}`
+    );
     const getJson = await getQuotes.json();
     return getJson.results;
   } catch (error) {
@@ -151,9 +153,9 @@ const quotes1 = async () => {
   }
 };
 
-quotes1().then((data) => {
-  generateCard(data);
-});
+// quotes1().then((data) => {
+//   generateCard(data);
+// });
 
 function generateCard(data) {
   let string = "";
@@ -165,3 +167,14 @@ function generateCard(data) {
   });
   contentDiv.innerHTML = string;
 }
+
+// creating search bar
+
+const searchButton = document.querySelector(".button");
+const inputField = document.querySelector(".searchBar");
+
+searchButton.addEventListener("click", () => {
+  quotes1().then((data) => {
+    generateCard(data);
+  });
+});

@@ -1,6 +1,8 @@
 // import { cart as myCart} from "../data/cart.js";
 import { cart, addToCart } from "../data/cart.js";
 import { products } from "../data/products.js";
+import { convertToDollars } from "./utils/money.js";
+
 let string = "";
 
 products.forEach((value) => {
@@ -25,7 +27,7 @@ products.forEach((value) => {
     <div class="product-rating-count link-primary">${value.rating.count}</div>
   </div>
 
-  <div class="product-price">$${(value.priceCents / 100).toFixed(2)}</div>
+  <div class="product-price">$${convertToDollars(value.priceCents)}</div>
 
   <div class="product-quantity-container">
     <select class="select-quantity-${value.id}">

@@ -99,3 +99,13 @@ document.querySelectorAll(".delete-button").forEach((button) => {
     container.remove();
   });
 });
+
+function updateItems() {
+  let cartQuantity = 0;
+  cart.forEach((value) => {
+    cartQuantity += value.quantity;
+  });
+  document.querySelector(".checkout-items").innerHTML = cartQuantity;
+}
+
+updateItems();

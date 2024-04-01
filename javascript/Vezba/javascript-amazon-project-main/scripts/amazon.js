@@ -93,6 +93,6 @@ function updateCart() {
     cartQuantity += value.quantity;
   });
   document.querySelector(".cart-quantity").innerHTML = cartQuantity;
-
-  console.log(cartQuantity);
 }
+
+updateCart();

@@ -1,4 +1,4 @@
-import { cart, removeFromCart } from "../data/cart.js";
+import { cart, removeFromCart, calculateCartQuantity } from "../data/cart.js";
 import { products } from "../data/products.js";
 import { convertToDollars } from "./utils/money.js";
 const orderList = document.querySelector(".order-summary");
@@ -36,9 +36,12 @@ cart.forEach((value) => {
           <span> Quantity: <span class="quantity-label">${
             value.quantity
           }</span> </span>
-          <span class="update-quantity-link link-primary">
+          <span class="update-quantity-link link-primary update-quantity"
+          data-product="${matchingProduct.id}">
             Update
           </span>
+          <input class="quantity-input">
+          <span class="save-quantity link-primary">Save</span>
           <span class="delete-quantity-link link-primary delete-button"
           data-id="${matchingProduct.id}">
             Delete
@@ -97,15 +100,21 @@ document.querySelectorAll(".delete-button").forEach((button) => {
     removeFromCart(productId);
     const container = document.querySelector(`.cart-id-${productId}`);
     container.remove();
+    updateItems();
   });
 });
 
 function updateItems() {
-  let cartQuantity = 0;
-  cart.forEach((value) => {
-    cartQuantity += value.quantity;
-  });
+  const cartQuantity = calculateCartQuantity();
   document.querySelector(".checkout-items").innerHTML = cartQuantity;
 }
 
 updateItems();
+
+document.querySelectorAll(".update-quantity").forEach((button) => {
+  button.addEventListener("click", () => {
+    const productId = button.dataset.product;
+    const container = document.querySelector(`.cart-id-${productId}`);
+    container.classList.add("is-editing");
+  });
+});

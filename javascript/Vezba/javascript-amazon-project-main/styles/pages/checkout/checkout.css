@@ -222,3 +222,15 @@
 .is-editing .quantity-input {
   display: initial;
 }
+
+.is-editing .save-quantity {
+  display: initial;
+}
+
+.is-editing .update-quantity {
+  display: none;
+}
+
+.is-editing .quantity-label {
+  display: none;
+}

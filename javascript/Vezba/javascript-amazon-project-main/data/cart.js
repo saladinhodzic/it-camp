@@ -55,3 +55,15 @@ export function calculateCartQuantity() {
   });
   return cartQuantity;
 }
+
+export function updateQuantity(productId, newQuantity) {
+  let matchingItem;
+  cart.forEach((value) => {
+    if (value.id === productId) {
+      matchingItem = value;
+    }
+  });
+
+  matchingItem = newQuantity;
+  saveToLocalStorage();
+}

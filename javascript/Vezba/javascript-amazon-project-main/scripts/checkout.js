@@ -38,9 +38,9 @@ cart.forEach((value) => {
           matchingProduct.priceCents
         )}</div>
         <div class="product-quantity">
-          <span> Quantity: <span class="quantity-label">${
-            value.quantity
-          }</span> </span>
+          <span> Quantity: <span class="quantity-label quantity-label-${
+            matchingProduct.id
+          }">${value.quantity}</span> </span>
           <span class="update-quantity-link link-primary update-quantity"
           data-product="${matchingProduct.id}">
             Update
@@ -136,6 +136,9 @@ document.querySelectorAll(".save-quantity").forEach((button) => {
     );
     const valueInput = +quantityInput.value;
     updateQuantity(productId, valueInput);
+
+    document.querySelector(`.quantity-label-${productId}`).innerHTML =
+      valueInput;
     calculateCartQuantity();
   });
 });

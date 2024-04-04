@@ -139,6 +139,6 @@ document.querySelectorAll(".save-quantity").forEach((button) => {
 
     document.querySelector(`.quantity-label-${productId}`).innerHTML =
       valueInput;
-    calculateCartQuantity();
+    updateItems();
   });
 });

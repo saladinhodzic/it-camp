@@ -141,4 +141,11 @@ document.querySelectorAll(".save-quantity").forEach((button) => {
       valueInput;
     updateItems();
   });
+  document.querySelectorAll(".input-quantity").forEach((input) => {
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        console.log("nesto");
+      }
+    });
+  });
 });

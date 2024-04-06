@@ -45,7 +45,9 @@ cart.forEach((value) => {
           data-product="${matchingProduct.id}">
             Update
           </span>
-          <input class="quantity-input quantity-input-${matchingProduct.id}">
+          <input data-product='${
+            matchingProduct.id
+          }' class="quantity-input quantity-input-${matchingProduct.id}">
           <span data-product='${
             matchingProduct.id
           }' class="save-quantity link-primary">Save</span>
@@ -128,24 +130,26 @@ document.querySelectorAll(".update-quantity").forEach((button) => {
 
 document.querySelectorAll(".save-quantity").forEach((button) => {
   button.addEventListener("click", () => {
-    const productId = button.dataset.product;
-    const container = document.querySelector(`.cart-id-${productId}`);
-    container.classList.remove("is-editing");
-    const quantityInput = document.querySelector(
-      `.quantity-input-${productId}`
-    );
-    const valueInput = +quantityInput.value;
-    updateQuantity(productId, valueInput);
-
-    document.querySelector(`.quantity-label-${productId}`).innerHTML =
-      valueInput;
-    updateItems();
-  });
-  document.querySelectorAll(".input-quantity").forEach((input) => {
-    input.addEventListener("keydown", (e) => {
-      if (e.key === "Enter") {
-        console.log("nesto");
-      }
-    });
+    saveQuantity(button);
   });
 });
+
+document.querySelectorAll(".quantity-input").forEach((input) => {
+  input.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      saveQuantity(input);
+    }
+  });
+});
+
+function saveQuantity(something) {
+  const productId = something.dataset.product;
+  const container = document.querySelector(`.cart-id-${productId}`);
+  container.classList.remove("is-editing");
+  const quantityInput = document.querySelector(`.quantity-input-${productId}`);
+  const valueInput = +quantityInput.value;
+  updateQuantity(productId, valueInput);
+
+  document.querySelector(`.quantity-label-${productId}`).innerHTML = valueInput;
+  updateItems();
+}

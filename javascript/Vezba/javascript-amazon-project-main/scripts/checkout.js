@@ -6,6 +6,8 @@ import {
 } from "../data/cart.js";
 import { products } from "../data/products.js";
 import { convertToDollars } from "./utils/money.js";
+import { hello } from "https://unpkg.com/supersimpledev@1.0.1/hello.esm.js";
+import dayjs from "https://unpkg.com/dayjs@1.11.10/esm/index.js";
 const orderList = document.querySelector(".order-summary");
 let orderListString = "";
 
@@ -153,3 +155,9 @@ function saveQuantity(something) {
   document.querySelector(`.quantity-label-${productId}`).innerHTML = valueInput;
   updateItems();
 }
+
+hello();
+
+const today = dayjs();
+const deliveryDay = today.add(7, "days");
+console.log(deliveryDay.format("dddd, MMMM D"));

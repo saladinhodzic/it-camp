@@ -16,3 +16,20 @@ function removeFirstThree(niz) {
 }
 console.log(removeFirstThree(niz));
 console.log(niz);
+
+// Write a function that takes an array (a) as argument. Extract the last 3 elements of 'a'. Return the resulting array
+const niz2 = [1, 2, 3, 4, 5];
+function lastThree(niz) {
+  return niz.splice(-3);
+}
+
+// return negative values
+
+const niz3 = [1, -2, 3, -4, 5];
+function myFunction(a) {
+  return a.filter((value) => {
+    return value < 0;
+  }).length;
+}
+
+console.log(myFunction(niz3));

@@ -8,3 +8,11 @@ function something(a, b) {
 
 console.log(something("key", "a"));
 console.log(something("nesto", "d"));
+
+// Write a function that takes an array (a) as argument. Remove the first 3 elements of 'a'. Return the result
+const niz = [1, 2, 3, 4, 5];
+function removeFirstThree(niz) {
+  return niz.splice(3);
+}
+console.log(removeFirstThree(niz));
+console.log(niz);

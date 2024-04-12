@@ -66,3 +66,16 @@ function longestWord(arr) {
   return long;
 }
 console.log(longestWord(strings));
+
+// Write a function that takes an array as argument. It should return true if all elements in the array are equal. It should return false otherwise
+const niz5 = [1, 1, 1, 2];
+function checkEvery(arr) {
+  return arr.every((value, index, arr) => {
+    if (value === arr[0]) {
+      return true;
+    }
+    return false;
+  });
+}
+
+console.log(checkEvery(niz5));

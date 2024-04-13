@@ -83,15 +83,21 @@ console.log(checkEvery(niz5));
 // Write a function that takes two arrays as arguments. Merge both arrays and remove duplicate values. Sort the merge result in ascending order. Return the resulting array
 const prviNiz = [1, 1, 4, 5, 6];
 const drugiNiz = [2, 3, 5, 6, 7];
+
 function mergeArrays(arr1, arr2) {
   const prviString = prviNiz.join(" ");
   const drugiString = drugiNiz.join(" ");
   const mergedString = prviString + " " + drugiString;
   const stringToArray = mergedString.split(" ");
-  return stringToArray.map((value) => {
-    return Number(value);
-  }).filter(value,index=>{
-    if(!value)
-  })
+  return stringToArray
+    .map((value) => {
+      return Number(value);
+    })
+    .filter((value, index, arr) => {
+      if (arr.indexOf(value) === index) {
+        return true;
+      }
+    })
+    .sort();
 }
 console.log(mergeArrays(prviNiz, drugiNiz));

@@ -85,8 +85,8 @@ const prviNiz = [1, 1, 4, 5, 6];
 const drugiNiz = [2, 3, 5, 6, 7];
 
 function mergeArrays(arr1, arr2) {
-  const prviString = prviNiz.join(" ");
-  const drugiString = drugiNiz.join(" ");
+  const prviString = arr1.join(" ");
+  const drugiString = arr2.join(" ");
   const mergedString = prviString + " " + drugiString;
   const stringToArray = mergedString.split(" ");
   return stringToArray
@@ -101,3 +101,11 @@ function mergeArrays(arr1, arr2) {
     .sort();
 }
 console.log(mergeArrays(prviNiz, drugiNiz));
+
+// return last three characters of string
+
+function lastThreeLetters(a) {
+  return a.slice(-3);
+}
+
+console.log(lastThreeLetters("nesto"));

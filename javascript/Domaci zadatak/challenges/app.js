@@ -109,3 +109,20 @@ function lastThreeLetters(a) {
 }
 
 console.log(lastThreeLetters("nesto"));
+
+// Write a function that takes an object (a) as argument. Return the sum of all object values.
+const obj = {
+  a: 2,
+  b: 3,
+  c: 6,
+};
+function sumObject(obj) {
+  let sum = 0;
+  Object.keys(obj).forEach((value) => {
+    const vrednost = obj[value];
+    sum += vrednost;
+  });
+  return sum;
+}
+
+console.log(sumObject(obj));

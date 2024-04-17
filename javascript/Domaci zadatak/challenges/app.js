@@ -118,11 +118,30 @@ const obj = {
 };
 function sumObject(obj) {
   let sum = 0;
-  Object.keys(obj).forEach((value) => {
-    const vrednost = obj[value];
-    sum += vrednost;
+  Object.values(obj).forEach((value) => {
+    // const vrednost = obj[value];
+    sum += value;
   });
   return sum;
 }
 
 console.log(sumObject(obj));
+
+// Given is an array numbers with integers. Return true if a zero is next to a zero or a four is next to a four. Return false if both occure.
+
+function either404(numbers) {
+  const string = numbers.join("");
+  if (string.includes("00")) {
+    if (string.includes("44")) {
+      return false;
+    }
+  } else if (string.includes("00") || string.includes("44")) {
+    return true;
+  } else if (!string.includes("44")) {
+    return false;
+  }
+}
+
+console.log(either404([0, 0, 3, 6, 4, 4]));
+console.log(either404([2, 8, 4, 4]));
+console.log(either404([4, 3, 1]));

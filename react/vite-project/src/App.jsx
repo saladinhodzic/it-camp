@@ -33,4 +33,3 @@ function App() {
 }
 
 export default App;
-export const a = 5;

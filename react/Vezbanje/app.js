@@ -1,25 +1,12 @@
-// function NavBar() {
-//   return (
-//     <nav>
-//       <h1>Sakiley</h1>
-//       <ul>
-//         <li>Pricing</li>
-//         <li>About</li>
-//         <li>Contact</li>
-//       </ul>
-//     </nav>
-//   );
-// }
-
-const navBar = (
-  <nav>
-    <h1>Sakiley</h1>
+const page = (
+  <div>
+    <h1>This is written in JSX</h1>
     <ul>
-      <li>Pricing</li>
-      <li>About</li>
       <li>Contact</li>
+      <li>About</li>
+      <li>Menu</li>
     </ul>
-  </nav>
+  </div>
 );
-
-ReactDOM.render(navBar, document.getElementById("root"));
+const root = document.getElementById("root");
+ReactDOM.render(page, root);

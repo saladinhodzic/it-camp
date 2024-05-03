@@ -1,18 +1,20 @@
-function PageRender() {
+function MyCustomPage() {
   return (
     <div>
-      <img width="50px" src="./React-icon.svg" />
-      <h1>Fun facts about React</h1>
-      <ul>
-        <li>Realised in 2013</li>
-        <li>Created by Jordan Walke</li>
-        <li>Has over 100k stars on GitHub</li>
-        <li>Maintained by Facebook</li>
-        <li>Powers thousands of apps</li>
-      </ul>
+      <header>
+        <nav>
+          <img src="./React-icon.svg" width="40px" />
+        </nav>
+      </header>
+      <h1>Reasons i learn React</h1>
+      <ol>
+        <li>idk</li>
+        <li>Popular</li>
+        <li>Profitable</li>
+      </ol>
+      <small>@2024 Saki development. All rights reserved.</small>
     </div>
   );
 }
-ReactDOM.createRoot(document.getElementById("root")).render(<PageRender />);
 
-console.log(page);
+ReactDOM.createRoot(document.getElementById("root")).render(<MyCustomPage />);

@@ -1,8 +1,13 @@
 function Header() {
   return (
     <header>
-      <nav>
-        <img src="./React-icon.svg" width="40px" />
+      <nav className="nav-bar">
+        <img src="./React-icon.svg" className="slika" />
+        <ul className="nav-items">
+          <li>Pricing</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
       </nav>
     </header>
   );

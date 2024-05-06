@@ -1,4 +1,29 @@
 * {
   margin: 0;
   box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+.nav-bar {
+  box-shadow: 0 5px 20px 0px #aaa;
+  height: 4em;
+  padding: 0 1em 0 1em;
+  margin-bottom: 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slika {
+  width: 60px;
+}
+
+.nav-items {
+  list-style: none;
+  display: flex;
+}
+
+.nav-items > li {
+  padding: 1em;
+  font-size: 1.25em;
 }

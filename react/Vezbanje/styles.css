@@ -27,3 +27,16 @@
   padding: 1em;
   font-size: 1.25em;
 }
+
+.main-content {
+  margin-bottom: 1em;
+}
+
+.main-content,
+.footer {
+  margin-left: 1em;
+}
+
+.footer small {
+  font-weight: bold;
+}

@@ -14,12 +14,16 @@ function Header() {
 }
 
 function Footer() {
-  return <small>@2024 Saki development. All rights reserved.</small>;
+  return (
+    <footer className="footer">
+      <small>@2024 Saki development. All rights reserved.</small>
+    </footer>
+  );
 }
 
 function MainComponent() {
   return (
-    <div>
+    <div className="main-content">
       <h1>Reasons i learn React</h1>
       <ol>
         <li>idk</li>

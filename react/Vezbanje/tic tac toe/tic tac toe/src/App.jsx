@@ -32,7 +32,7 @@ export default function Board() {
   if (winner) {
     status = "The winner is " + winner;
   } else {
-    status = "Next player is" + xIsNext ? "X" : "O";
+    status = "Next player is " + (xIsNext ? "X" : "O");
   }
 
   return (
@@ -71,7 +71,7 @@ function declareWinner(newSquares) {
     [1, 4, 7],
   ];
 
-  for (i = 0; i < lines.length; i++) {
+  for (let i = 0; i < lines.length; i++) {
     const [a, b, c] = lines[i];
     if (
       newSquares[a] &&

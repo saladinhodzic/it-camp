@@ -6,28 +6,14 @@ const slike = [
   "./src/assets/slike/lik3.jpg",
 ];
 
-function Profile() {
+function Header() {
   return (
-    <div className="profiles">
-      <div className="card">
-        <img className="profile-1 profile" src={slike[0]} />
-        <h1>Carlos Hernandez</h1>
-        <p>Carlos is young man but he transfers drugs</p>
-      </div>
-      <div className="card">
-        <img className="profile-2 profile" src={slike[1]} />
-        <h1>Naruto Saske</h1>
-        <p>Fast but doesnt think much</p>
-      </div>
-      <div className="card">
-        <img className="profile-3 profile" src={slike[2]} />
-        <h1>Sakura Nesto</h1>
-        <p>Thinks fast but slow</p>
-      </div>
+    <div className="header">
+      <h3>LOGO</h3>
     </div>
   );
 }
 
 export default function App() {
-  return <Profile />;
+  return <Header />;
 }
